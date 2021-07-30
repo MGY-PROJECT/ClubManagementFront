@@ -35,6 +35,20 @@ Uiwang.addEventListener('click', function(){
     Uiwang_club.classList.add('event');
 })
 
+// 검색창
+const search_input = document.querySelectorAll('.search_button input');
+[...document.querySelectorAll('.search_button .material-icons')].forEach(function(item){
+    item.addEventListener('click', function(){
+        for(let i = 0; i<= search_input.length; i++){
+            search_input[i].classList.toggle('event');
+        }
+    })
+})
+
+search.addEventListener('click', function(){
+    search_input.classList.toggle('event');
+})
+
 // 화면 보여질 때 제일 먼저 일어나는 이벤트
 window.onclick = function(){
     

@@ -125,6 +125,7 @@ section .explanation .enrollment .material-icons
 }
 section .explanation .call{
     margin-left: 200px;
+    margin-top: 20px;
     border: 1px solid #333;
     display: flex;
 }
@@ -137,12 +138,31 @@ section .call .material-icons{
     border-radius: 50%;
     margin: 30px;
 }
+/*손봐야 될 부분*/
 .search_button{
     position: absolute;
-    right: 0;
+    top: 26%;
+    left: 76%;
+}
+.search_button input{
+    display: none;
+    width: 150px;
+    height: 25px;
+    font-size: 15px;
+    transition: 1s;
+    
+}
+.search_button input.event{
+    display: inline;
 }
 .search_button .material-icons{
-    font-size: 25px;
+    position: absolute;
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .chungu_kinds, .jeungpyeong_kinds, .Uiwang_kinds{
     margin-top: 100px;
