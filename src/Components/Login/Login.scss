@@ -30,6 +30,17 @@
         height: 28px;
         margin: 8px 0;
       }
+
+      .loginBtn {
+        font-size: 1.1rem;
+        background-color: hsl(359, 55%, 39%);
+        color: hsl(0, 0%, 100%);
+        border: none;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
