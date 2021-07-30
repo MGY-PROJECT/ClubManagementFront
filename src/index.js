@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./Components/Reducer";
 
-const store = createStore(reducer);
+export const store = createStore(reducer);
 
 ReactDOM.render(
   <BrowserRouter>

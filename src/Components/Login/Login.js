@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { store } from "../..";
 import "./Login.scss";
 
 const Login = () => {
@@ -7,6 +8,11 @@ const Login = () => {
 
   const onSubmit = (e) => {
     console.log("login");
+    // axios
+    store.dispatch({ type: "login" });
+    localStorage.setItem("id", id);
+    console.log(localStorage.getItem("id"));
+    console.log(store.getState());
     e.preventDefault();
   };
 
