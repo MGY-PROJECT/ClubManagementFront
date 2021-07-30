@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul li{
+    list-style: none;
+}
+.inner{
+    margin: auto;
+    width: 1300px;
+    height: auto;
+}
+header{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+header .header_img{
+    background-image: url("https://www.ut.ac.kr/images/common/svisual_bg_6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+.header_inner{
+    padding: 70px;
+}
+.header_text{
+    padding: 70px 0 !important;
+    width: 540px;
+    height: 80px;
+    margin: 0 auto 45px;
+    background-image: url("https://www.ut.ac.kr/images/kor2/layout/sub_title.png");
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    font-size: 30px;
+    color: white;
+    white-space: nowrap;
+}
+.sub_text{
+    font-size: 20px;
+    color: white;
+}
+aside{
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    padding-inline-start: 10px;
+}
+.campus_list{
+    width: 100%;
+    margin: 30px 10px;
+    position: absolute;
+    border: 1px solid #333;
+}
+.campus_list .chungu{
+}
+.campus_list .chungu button, .campus_list .jeungpyeong button,
+.campus_list .Uiwang button
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(111, 109, 109);
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.campus_list .chungu button .material-icons,
+.campus_list .jeungpyeong button .material-icons,
+.campus_list .Uiwang button .material-icons{
+    margin-left: 10px;
+}
+.campus_list .chungu button:active, .campus_list .jeungpyeong button:active,
+.campus_list .Uiwang button:active{
+    color: #fff;
+    background-color: rgb(111, 109, 109);
+    border: 1px solid #000;
+}
+.campus_list .chungu button .material-icons:active,
+.campus_list .jeungpyeong button .material-icons:active,
+.campus_list .Uiwang button .material-icons:active{
+    border: 1px solid #fff;
+}
+.chungu .chungu_list, .jeungpyeong .jeungpyeong_list,
+.Uiwang .Uiwang_list{
+    display: none;
+}
+.chungu .chungu_list.event, .jeungpyeong .jeungpyeong_list.event,
+.Uiwang .Uiwang_list.event{
+    display: block;
+}
+section{
+    position: relative;
+    min-height: 700px;
+}
+section .explanation{
+    width: 90%;
+    height: 100px;
+    margin: 30px;
+}
+section .explanation .enrollment{
+    display: flex;
+    margin-left: 200px;
+    border: 1px solid #333;
+}
+section .explanation .enrollment .material-icons
+{
+    width: 70px;
+    height: 70px;
+    font-size: 70px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 30px;
+}
+section .explanation .call{
+    margin-left: 200px;
+    border: 1px solid #333;
+    display: flex;
+}
+section .call .material-icons{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 30px;
+}
+.search_button{
+    position: absolute;
+    right: 0;
+}
+.search_button .material-icons{
+    font-size: 25px;
+}
+.chungu_kinds, .jeungpyeong_kinds, .Uiwang_kinds{
+    margin-top: 100px;
+    display: none;
+}
+.chungu_kinds.event, .jeungpyeong_kinds.event, .Uiwang_kinds.event{
+    display: block;
+    margin-left: 180px;
+}
+section .chungu_kinds .first_line, section .jeungpyeong_kinds .first_line, section .Uiwang_kinds .first_line{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .chungu_kinds .second_line,
+section .jeungpyeong_kinds .second_line,
+section .Uiwang_kinds .second_line{
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chungu_kinds .club,
+section .jeungpyeong_kinds .club,
+section .Uiwang_kinds .club{
+    width: 200px;
+    height: 300px;
+    margin: 120px 20px;
+    border-radius: 10px 10px;
+    border: 1px solid #333;
+}
+footer{
+    height: 300px;
+    background-color: #333;
+}
+
+/* width 값 950 이하 */
+@media screen and (max-width: 1300px){
+    header .header_img{
+        width: 1300px;
+    }
+    footer{
+        width: 1300px;
+    }
+}
