@@ -1,4 +1,5 @@
 body{
+    position: relative;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -161,8 +162,11 @@ section .call .material-icons{
 /*손봐야 될 부분*/
 .search_button{
     position: absolute;
-    top: 8.3%;
+    top: 10%;
     right: 400px;
+}
+.search_button.event{
+    display: none;
 }
 .search_button:hover input{
     display: inline;
@@ -205,22 +209,54 @@ section .chungu_kinds .second_line,
 section .jeungpyeong_kinds .second_line,
 section .Uiwang_kinds .second_line{
     display: flex;
+    margin-top: -200px;
     justify-content: center;
     align-items: center;
 }
-.chungu_kinds .club,
+section .chungu_kinds .club,
 section .jeungpyeong_kinds .club,
 section .Uiwang_kinds .club{
     width: 200px;
     height: 300px;
     margin: 120px 20px;
+    box-sizing:content-box;
     border-radius: 10px 10px;
     border: 1px solid #333;
 }
+/*분과 별로 클릭 시 보여지는 프르필*/
+.sport, .music, .volunteer{
+    display: inline;
+}
+.sport.event, .music.event, .volunteer.event{
+    display: none;
+}
+
+.up_arrow{
+    width: 42px;
+    height: 42px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    display: none;
+}
+.up_arrow.event{
+    display: flex;
+}
+.up_arrow .material-icons{
+}
 footer{
+    position: relative;
     height: 300px;
     background-color: #333;
 }
+
 
 /* width 값 950 이하 */
 @media screen and (max-width: 1300px){

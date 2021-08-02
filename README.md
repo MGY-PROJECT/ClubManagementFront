@@ -13,3 +13,7 @@
 <img width="1440" alt="스크린샷 2021-08-02 오전 11 41 27" src="https://user-images.githubusercontent.com/76980526/127797745-38455450-3121-4e2f-90c4-efd135fafa8f.png">
 
 
+# 08월 2일 월요일
+### 1. 동아리 분과 별로 클릭 시 해당 분과 프로필만 나오게 변경
+### 2. 하단에 위에 화살표 누르면 사이트 최상단으로 이동하게 만듦
+<img width="1440" alt="스크린샷 2021-08-02 오후 4 03 25" src="https://user-images.githubusercontent.com/76980526/127818342-39c95c02-a89b-41de-8f91-68803fedcde4.png">
