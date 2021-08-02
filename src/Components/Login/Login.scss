@@ -11,7 +11,7 @@
       margin: auto;
       margin-top: 40vh;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
   }
   .login_form {
@@ -40,6 +40,10 @@
         &:hover {
           opacity: 0.8;
         }
+      }
+
+      .p {
+        cursor: pointer;
       }
     }
   }

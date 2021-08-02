@@ -1,0 +1,46 @@
+.joinPage {
+  header {
+    img {
+      width: 100vw;
+      height: 26vh;
+    }
+  }
+  .insertJoin {
+    width: 380px;
+    margin: 16px auto;
+    .joinText {
+      text-align: center;
+      &::after {
+        content: "";
+        display: block;
+        background-color: hsl(0, 0%, 0%);
+        height: 2px;
+        margin: 16px 0;
+      }
+    }
+
+    .joinForm {
+      display: grid;
+      gap: 8px 4px;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: repeat(5, 42px);
+      position: relative;
+
+      .text {
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .exception_id {
+        display: none;
+      }
+
+      .fa-eye {
+        position: absolute;
+        top: 63px;
+        right: 8px;
+        z-index: 100;
+      }
+    }
+  }
+}

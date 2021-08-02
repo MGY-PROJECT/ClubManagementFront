@@ -2,26 +2,26 @@ import { useState } from "react";
 import { store } from "../..";
 import "./Login.scss";
 
-const Login = () => {
+const Login = ({ history }) => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
   const onSubmit = (e) => {
+    e.preventDefault();
     console.log("login");
     // axios
     store.dispatch({ type: "login" });
     localStorage.setItem("id", id);
-    console.log(localStorage.getItem("id"));
     console.log(store.getState());
-    e.preventDefault();
+    console.log(localStorage.getItem("id"));
   };
 
   return (
     <div className="login_page">
       <div className="background">
         <div className="pageDescription">
-          <h1>lorem</h1>
-          <p>lorem lorem lorem lorem lorem lorem</p>
+          <p>한국교통대학교</p>
+          <p>중앙 동아리 사이트</p>
         </div>
       </div>
       <form className="login_form" onSubmit={onSubmit}>
@@ -46,8 +46,12 @@ const Login = () => {
               로그인
             </button>
           </div>
-          <p>아이디/비밀번호 찾기</p>
-          <p>회원가입</p>
+          <p onClick={() => history.push("/find_pw")} className="p">
+            비밀번호 찾기
+          </p>
+          <p onClick={() => history.push("/join")} className="p">
+            회원가입
+          </p>
         </div>
       </form>
     </div>
