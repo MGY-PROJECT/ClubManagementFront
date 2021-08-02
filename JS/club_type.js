@@ -36,20 +36,40 @@ Uiwang.addEventListener('click', function(){
 })
 
 // 검색창
-const search_input = document.querySelectorAll('.search_button input');
-[...document.querySelectorAll('.search_button .material-icons')].forEach(function(item){
-    item.addEventListener('click', function(){
-        for(let i = 0; i<= search_input.length; i++){
-            search_input[i].classList.toggle('event');
-        }
-    })
-})
 
-search.addEventListener('click', function(){
-    search_input.classList.toggle('event');
+// [...document.querySelectorAll('.search_button .material-icons')].forEach(function(item){
+//     item.addEventListener('click', function(){
+//         for(let i = 0; i<= search_input.length; i++){
+//             search_input[i].classList.add('event');
+//         }
+//     })
+//     item.addEventListener('blur', function(){
+//         for(let i = 0; i <= search_input.length; i++){
+//             search_input[i].classList.remove('event');
+//         }
+//     })
+// })
+const search = document.querySelector('.search_button .material-icons');
+search.addEventListener('add', function(){
+    search.classList.add('event');
 })
-
 // 화면 보여질 때 제일 먼저 일어나는 이벤트
 window.onclick = function(){
     
 }
+
+// campus_list부분 특정 위치에 스크롤 되면 화면에 fixed(고정)되도록 하기.
+// 스크롤 이벤트
+
+document.addEventListener('scroll',function(){
+    const campus_list = document.querySelector('.campus_list');
+    var currentScrollValue = document.documentElement.scrollTop;
+
+    console.log('currentScrollValue : ' + currentScrollValue);
+    if(currentScrollValue > 500){
+        campus_list.classList.add('event');
+    }
+    else{
+        campus_list.classList.remove('event');
+    }
+})

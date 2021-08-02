@@ -8,6 +8,21 @@ a{
     text-decoration: none;
     color: #333;
 }
+.division_text::before{
+    content: "";
+    background-color: #701e20;
+    position: absolute;
+    height: 2px;
+    width: 45px;
+    margin-top: -5px;
+}
+.division_text{
+    position: absolute;
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
 ul li{
     list-style: none;
 }
@@ -55,10 +70,13 @@ aside{
     padding-inline-start: 10px;
 }
 .campus_list{
-    width: 100%;
-    margin: 30px 10px;
     position: absolute;
+    margin: 10px 40px;
     border: 1px solid #333;
+}
+.campus_list.event{
+    position: fixed;
+    margin: -280px 40px;
 }
 .campus_list .chungu{
 }
@@ -75,6 +93,7 @@ aside{
     font-size: 14px;
     font-weight: 700;
 }
+
 .campus_list .chungu button .material-icons,
 .campus_list .jeungpyeong button .material-icons,
 .campus_list .Uiwang button .material-icons{
@@ -98,6 +117,7 @@ aside{
 .chungu .chungu_list.event, .jeungpyeong .jeungpyeong_list.event,
 .Uiwang .Uiwang_list.event{
     display: block;
+    cursor: pointer;
 }
 section{
     position: relative;
@@ -141,8 +161,11 @@ section .call .material-icons{
 /*손봐야 될 부분*/
 .search_button{
     position: absolute;
-    top: 26%;
-    left: 76%;
+    top: 8.3%;
+    right: 400px;
+}
+.search_button:hover input{
+    display: inline;
 }
 .search_button input{
     display: none;
@@ -150,19 +173,19 @@ section .call .material-icons{
     height: 25px;
     font-size: 15px;
     transition: 1s;
-    
-}
-.search_button input.event{
-    display: inline;
 }
 .search_button .material-icons{
     position: absolute;
-    margin-left: 10px;
+    margin-left: 2px;
     font-size: 30px;
     font-weight: 700;
     border: 2px solid #333;
     border-radius: 50%;
     cursor: pointer;
+    opacity: 1;
+}
+.search_button .material-icons.event{
+    opacity: 0;
 }
 .chungu_kinds, .jeungpyeong_kinds, .Uiwang_kinds{
     margin-top: 100px;
@@ -181,7 +204,6 @@ section .chungu_kinds .first_line, section .jeungpyeong_kinds .first_line, secti
 section .chungu_kinds .second_line,
 section .jeungpyeong_kinds .second_line,
 section .Uiwang_kinds .second_line{
-    margin-top: -100px;
     display: flex;
     justify-content: center;
     align-items: center;
