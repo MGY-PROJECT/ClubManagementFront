@@ -1,6 +1,6 @@
 .joinPage {
   .insertJoin {
-    width: 380px;
+    width: 520px;
     margin: 16px auto;
     .joinText {
       text-align: center;
@@ -17,7 +17,7 @@
       display: grid;
       gap: 24px 12px;
       grid-template-columns: 1fr 3fr;
-      grid-template-rows: repeat(8, 42px);
+      grid-template-rows: repeat(7, 42px);
       position: relative;
 
       .text {
@@ -31,7 +31,7 @@
         height: 54px;
         padding: 0px 19px;
         line-height: 20px;
-        font-size: 14px;
+        font-size: 16px;
         outline: none;
         &:focus {
           border: 1px solid hsl(359, 55%, 39%);
@@ -40,10 +40,25 @@
 
       .fa-eye {
         position: absolute;
-        top: 84px;
+        top: 86px;
         right: 8px;
         z-index: 100;
         cursor: pointer;
+      }
+
+      .submitBtn {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border: 1px solid hsl(0, 0%, 80%);
+        border-radius: 3px;
+        background-color: hsl(359, 55%, 39%);
+        color: hsl(0, 0%, 100%);
+        font-size: 1.1rem;
+        cursor: pointer;
+        height: 52px;
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
   }

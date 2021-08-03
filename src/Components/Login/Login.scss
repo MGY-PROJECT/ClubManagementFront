@@ -19,15 +19,15 @@
     flex: 4.5;
     .login_form {
       > div {
-        width: 300px;
+        width: 360px;
         margin: auto;
         text-align: center;
         margin: auto;
-        margin-top: 38vh;
+        margin-top: 32vh;
 
         .id,
         .pw {
-          width: 100%;
+          width: 88%;
           border: 1px solid hsl(0, 0%, 80%);
           border-radius: 3px;
           height: 54px;
@@ -57,13 +57,15 @@
         }
 
         .find_join {
+          margin-top: 6px;
+          margin-bottom: 32px;
           .p {
             float: right;
             font-size: 13px;
             cursor: pointer;
             &:last-child::after {
               content: "|";
-              padding: 0 4px;
+              padding: 0 8px;
             }
           }
         }
