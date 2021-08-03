@@ -32,7 +32,7 @@ const Join = ({ history }) => {
         <h2 className="joinText">회원가입</h2>
         <form className="joinForm" onSubmit={onSubmit} autoComplete="off">
           <label htmlFor="id" className="text">
-            아이디
+            학번
           </label>
           <input
             type="text"
@@ -41,7 +41,7 @@ const Join = ({ history }) => {
             minLength="7"
             placeholder="학번을 입력해주세요. 예)1234567"
           />
-          <p className="exception_id">아이디는 학번을 입력해주세요.</p>
+
           <label htmlFor="pw" className="text">
             비밀번호
           </label>
@@ -57,7 +57,7 @@ const Join = ({ history }) => {
           <input
             type="text"
             id="name"
-            minLength="7"
+            autoComplete="off"
             placeholder="이름을 입력해주세요."
           />
           <label htmlFor="email" className="text">
@@ -68,8 +68,8 @@ const Join = ({ history }) => {
             id="email"
             placeholder="이메일을 입력해주세요. ex)hong@naver.com"
           />
-          <button onClick={() => history.push("/")}>돌아가기</button>
           <button type="submit">회원가입</button>
+          <button onClick={() => history.push("/")}>돌아가기</button>
         </form>
       </div>
     </div>

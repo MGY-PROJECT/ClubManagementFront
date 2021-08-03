@@ -30,16 +30,12 @@
         text-align: center;
         padding-top: 10px;
       }
-
-      .exception_id {
-        display: none;
-      }
-
       .fa-eye {
         position: absolute;
         top: 63px;
         right: 8px;
         z-index: 100;
+        cursor: pointer;
       }
     }
   }

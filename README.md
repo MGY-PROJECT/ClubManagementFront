@@ -4,6 +4,7 @@
 > 디자인은 차차 손봐야됨
 >
 > > ![image](https://user-images.githubusercontent.com/57670160/127902157-561b7871-2444-4ff1-8594-3c2bbbff24c8.png)
+> > ![image](https://user-images.githubusercontent.com/57670160/127959368-8867afa2-e6fd-4d14-8b96-17fb5ad23883.png)
 
 # 20210730
 
