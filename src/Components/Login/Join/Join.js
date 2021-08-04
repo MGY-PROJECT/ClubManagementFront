@@ -58,9 +58,64 @@ const depart = {
     "유아교육학과",
     "미디어컨텐츠학과",
   ],
+  보건생명대학: [
+    "간호학과",
+    "식품생명학부",
+    "식품공학전공",
+    "식품영양학전공",
+    "생명공학전공",
+    "물리치료학과",
+    "응급구조학과",
+    "유아특수교육학과",
+    "IT응용융합학과",
+  ],
+  철도대학: [
+    "철도경영.물류.데이터사이언스학부",
+    "철도경영물류학전공",
+    "데이터사이언스전공",
+    "철도공학부",
+    "철도운전시스템전공",
+    "철도차량시스템전공",
+    "철도인프라시스템공학전공",
+    "철도전기전자전공",
+  ],
 };
 
-const Join = ({ history }) => {
+const clubs = {
+  충주: {
+    체육: [
+      "카카",
+      "오투",
+      "행콕",
+      "퍼펙트",
+      "위키드",
+      "산악부",
+      "열정",
+      "스플릿",
+      "국원검우회",
+      "하이런",
+      "best5",
+      "보통사람들",
+    ],
+    음악: ["피날레", "바이탈싸인", "포세이돈", "소리담", "신문고", "식스라인"],
+    봉사: ["폴리스", "Youth JC", "LEO", "KNUT해봉연합", "러빙프렌즈"],
+    종교: ["CCC", "방주짓는사람들"],
+    학술: ["에가오", "유니피스"],
+    문예: ["사랑방극예술연구회", "셔터스네이크"],
+  },
+  증평: {
+    체육: ["버저비터", "GO유도"],
+    봉사: ["절주"],
+    종교: ["PAX"],
+  },
+  의왕: {
+    체육: ["스윙스"],
+    음악: ["APEX"],
+    학술: ["1067"],
+  },
+};
+
+const Join = () => {
   const [inputs, setInputs] = useState({
     id: "",
     pw: "",
@@ -93,9 +148,53 @@ const Join = ({ history }) => {
     if (!idReg.test(id)) {
       alert("아이디가 잘못되었습니다.");
     }
+    // 비밀번호 영문 숫자 외 다른게 들어오지 않도록 regex
+    // 년도 -> 나이 정규표현식을 써서
   };
 
-  // console.log(depart);
+  const college = (depart) => {
+    const col = [];
+    col.push(
+      <option value="선택" key="default">
+        선택
+      </option>
+    );
+    for (const d of Object.keys(depart)) {
+      col.push(
+        <optgroup label={d} key={d}>
+          {depart[d].map((ele) => (
+            <option value={ele} key={ele}>
+              {ele}
+            </option>
+          ))}
+        </optgroup>
+      );
+    }
+    return col;
+  };
+
+  const clubfnc = (clubs) => {
+    const col = [];
+    col.push(
+      <option value="선택" key="default">
+        선택
+      </option>
+    );
+    for (const c of Object.keys(clubs)) {
+      for (const cc of Object.keys(clubs[c])) {
+        col.push(
+          <optgroup label={`${c} - ${cc}`} key={`${c} - ${cc}`}>
+            {clubs[c][cc].map((ccc) => (
+              <option value={ccc} key={ccc}>
+                {ccc}
+              </option>
+            ))}
+          </optgroup>
+        );
+      }
+    }
+    return col;
+  };
 
   return (
     <div className="joinPage">
@@ -170,7 +269,9 @@ const Join = ({ history }) => {
             required
             value={department}
             onChange={onChange}
-          ></select>
+          >
+            {college(depart)}
+          </select>
           <label htmlFor="club" className="text">
             동아리
           </label>
@@ -181,7 +282,9 @@ const Join = ({ history }) => {
             required
             value={club}
             onChange={onChange}
-          ></select>
+          >
+            {clubfnc(clubs)}
+          </select>
           <button type="submit" className="submitBtn">
             회원가입
           </button>
