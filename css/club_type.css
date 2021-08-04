@@ -73,23 +73,27 @@ aside{
 .campus_list{
     position: absolute;
     margin: 10px 40px;
-    border: 1px solid #333;
 }
 .campus_list.event{
     position: fixed;
-    margin: -280px 40px;
+    margin: -320px 40px;
+    transition: .3s;
 }
 .campus_list .chungu{
 }
 .campus_list .chungu button, .campus_list .jeungpyeong button,
 .campus_list .Uiwang button
 {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    cursor: pointer;
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(111, 109, 109);
+    color: #701e20;
     background-color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -100,20 +104,22 @@ aside{
 .campus_list .Uiwang button .material-icons{
     margin-left: 10px;
 }
-.campus_list .chungu button:active, .campus_list .jeungpyeong button:active,
-.campus_list .Uiwang button:active{
-    color: #fff;
-    background-color: rgb(111, 109, 109);
-    border: 1px solid #000;
-}
-.campus_list .chungu button .material-icons:active,
-.campus_list .jeungpyeong button .material-icons:active,
-.campus_list .Uiwang button .material-icons:active{
-    border: 1px solid #fff;
-}
+
 .chungu .chungu_list, .jeungpyeong .jeungpyeong_list,
-.Uiwang .Uiwang_list{
+.Uiwang .Uiwang_list{   
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    border-top: 2px solid #701e20;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: -2px;
+    background-color: rgb(245, 245, 245);
     display: none;
+}
+.chungu .chungu_list li, .jeungpyeong .jeungpyeong_list li,
+.Uiwang .Uiwang_list li{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
 }
 .chungu .chungu_list.event, .jeungpyeong .jeungpyeong_list.event,
 .Uiwang .Uiwang_list.event{
@@ -191,16 +197,27 @@ section .call .material-icons{
 .search_button .material-icons.event{
     opacity: 0;
 }
+.chungu_kinds .search_button{
+    margin-top: 40px;
+}
 .chungu_kinds, .jeungpyeong_kinds, .Uiwang_kinds{
     margin-top: 100px;
     display: none;
+}
+.chungu_kinds.event{
+    margin-top: 200px;
 }
 .chungu_kinds.event, .jeungpyeong_kinds.event, .Uiwang_kinds.event{
     display: block;
     margin-left: 180px;
 }
-section .chungu_kinds .first_line, section .jeungpyeong_kinds .first_line, section .Uiwang_kinds .first_line{
+section .jeungpyeong_kinds .first_line, section .Uiwang_kinds .first_line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 200px;
+}
+section .chungu_kinds .first_line{
     display: flex;
     justify-content: center;
     align-items: center;

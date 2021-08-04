@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/club_profile.css">
+    <script defer src="../JS/club_profile.js"></script>
+    <title>프로필</title>
+</head>
+<body>
+    <header>
+        <div class="dark_bg">
+            <!--만약 파일 이름이 정해지면 경로가 background-image로 지정되도록 하기
+            밑에 배경 이미지 틀을 display : none; 으로 지정 후 파일이 선택되면 display: block;으로 바뀌면서 화면 뜨게 해보기-->
+            <!--만약 in_file에 뒤에가 .img나, jpeg, png 등 이미지 파일이라면 backImg, in_file에 event클래스 추가
+            in_file에 클래스가 추가되면 display:none이 되고, backImg는 display : block으로 바뀌게 하면서 이미지를 띄우기.-->
+            <div class="back">
+                <input class="in_file" type="file" name="file" accept="image/*">
+                <div class="backImg"></div>
+            </div>
+            <div class="profile">
+                <input class="in_file" type="file" name="file" accept="image/*">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="dark_bg">
+            <div class="inner">
+                <div class="introduce">
+                    <button>동아리 소개</button>
+                </div>
+                <!--동아리별 구글폼즈 or 네이버 폼즈에 설문조사 링크-->
+                <div class="join">
+                    <button>동아리 가입</button>
+                </div>
+                <div class="organization">
+                    <button>조직도</button>
+                </div>
+                <div class="picture">
+                    <button>동아리 사진</button>
+                </div>
+            </div>
+        </div>
+        <div class="introduce_section">
+            <div class="close">
+                <span class="material-icons">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="organization_section">
+            <div class="close">
+                <span class="material-icons">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="picture_section">
+            <div class="close">
+                <span class="material-icons">
+                    close
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
