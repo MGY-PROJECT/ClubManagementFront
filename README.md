@@ -1,7 +1,7 @@
 # 20210806
 
 > 반응형 웹
-> ![image](https://user-images.githubusercontent.com/57670160/128385508-3f79bb20-9035-4d34-a531-d1eefda4a63b.png)
+> ![image](https://user-images.githubusercontent.com/57670160/128385508-3f79bb20-9035-4d34-a531-d1eefda4a63b.png) ![image](https://user-images.githubusercontent.com/57670160/128390782-5c9c78bc-e746-47c8-b24f-23d25eea70a8.png)
 
 # 20210804
 

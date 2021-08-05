@@ -1,6 +1,8 @@
 .joinPage {
+  width: 100%;
+  height: 100vh;
   .insertJoin {
-    width: 520px;
+    height: 100%;
     margin: 16px auto;
     .joinText {
       text-align: center;
@@ -15,33 +17,35 @@
 
     .joinForm {
       display: grid;
-      gap: 24px 12px;
+      gap: 2%;
       grid-template-columns: 1fr 3fr;
-      grid-template-rows: repeat(7, 55px);
+      grid-template-rows: repeat(7, 6%);
       position: relative;
+      height: 100%;
+      margin: 0 2%;
 
       .text {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 1em;
       }
 
       .input {
         border: 1px solid hsl(0, 0%, 80%);
         border-radius: 3px;
-        height: 54px;
-        padding: 0px 19px;
-        line-height: 20px;
-        font-size: 16px;
+        height: 100%;
+        padding: 0px 8px;
+        font-size: 1rem;
         outline: none;
         &:focus {
-          border: 1px solid hsl(359, 55%, 39%);
+          border: 1px solid hsl(360, 55%, 40%);
         }
       }
 
       .fa-eye {
         position: absolute;
-        top: 98px;
+        top: 10%;
         right: 8px;
         z-index: 30;
         cursor: pointer;
@@ -52,13 +56,83 @@
         grid-column-end: 3;
         border: 1px solid hsl(0, 0%, 80%);
         border-radius: 3px;
-        background-color: hsl(359, 55%, 39%);
+        background-color: hsl(360, 55%, 40%);
         color: hsl(0, 0%, 100%);
         font-size: 1.1rem;
         cursor: pointer;
         height: 52px;
         &:hover {
           opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .joinPage {
+    .insertJoin {
+      width: 520px;
+      margin: 16px auto;
+      .joinText {
+        text-align: center;
+        &::after {
+          content: "";
+          display: block;
+          background-color: hsl(0, 0%, 0%);
+          height: 3px;
+          margin: 16px 0;
+        }
+      }
+
+      .joinForm {
+        display: grid;
+        gap: 24px 12px;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(7, 55px);
+        position: relative;
+
+        .text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1em;
+        }
+
+        .input {
+          border: 1px solid hsl(0, 0%, 80%);
+          border-radius: 3px;
+          height: 54px;
+          padding: 0px 19px;
+          line-height: 20px;
+          font-size: 1em;
+          outline: none;
+          &:focus {
+            border: 1px solid hsl(360, 55%, 40%);
+          }
+        }
+
+        .fa-eye {
+          position: absolute;
+          top: 98px;
+          right: 8px;
+          z-index: 30;
+          cursor: pointer;
+        }
+
+        .submitBtn {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          border: 1px solid hsl(0, 0%, 80%);
+          border-radius: 3px;
+          background-color: hsl(360, 55%, 40%);
+          color: hsl(0, 0%, 100%);
+          font-size: 1.1rem;
+          cursor: pointer;
+          height: 52px;
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }
