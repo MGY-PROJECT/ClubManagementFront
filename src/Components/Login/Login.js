@@ -19,41 +19,39 @@ const Login = ({ history }) => {
   return (
     <div className="login_page">
       <div className="background">
-        <div className="pageDescription">
-          <p>한국교통대학교</p>
-          <p>중앙 동아리 사이트</p>
-        </div>
+        <p>
+          한국교통대학교
+          <br /> 중앙 동아리 사이트
+        </p>
       </div>
       <div className="login">
         <form className="login_form" onSubmit={onSubmit} autoComplete="off">
-          <div>
-            <h1>로그인</h1>
-            <input
-              type="text"
-              className="id"
-              placeholder="학번을 입력해주세요"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
-            ></input>
-            <input
-              type="password"
-              className="pw"
-              placeholder="비밀번호를 입력해주세요"
-              value={pw}
-              onChange={(e) => setPw(e.target.value)}
-            ></input>
-            <div className="find_join">
-              <p onClick={() => history.push("/join")} className="p">
-                회원가입
-              </p>
-              <p onClick={() => history.push("/find_pw")} className="p">
-                비밀번호 찾기
-              </p>
-            </div>
-            <button type="submit" className="loginBtn">
-              로그인
-            </button>
+          <h1>로그인</h1>
+          <input
+            type="text"
+            className="id"
+            placeholder="학번을 입력해주세요"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          ></input>
+          <input
+            type="password"
+            className="pw"
+            placeholder="비밀번호를 입력해주세요"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+          ></input>
+          <div className="find_join">
+            <p onClick={() => history.push("/join")} className="p">
+              회원가입
+            </p>
+            <p onClick={() => history.push("/find_pw")} className="p">
+              비밀번호 찾기
+            </p>
           </div>
+          <button type="submit" className="loginBtn">
+            로그인
+          </button>
         </form>
       </div>
     </div>
