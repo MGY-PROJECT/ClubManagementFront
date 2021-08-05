@@ -77,7 +77,8 @@ aside{
 .campus_list.event{
     position: fixed;
     margin: -320px 40px;
-    transition: .3s;
+    transform: translateY(0px);
+    transition: .8s;
 }
 .campus_list .chungu{
 }
@@ -98,7 +99,6 @@ aside{
     font-size: 14px;
     font-weight: 700;
 }
-
 .campus_list .chungu button .material-icons,
 .campus_list .jeungpyeong button .material-icons,
 .campus_list .Uiwang button .material-icons{
@@ -112,7 +112,7 @@ aside{
     border-top: 2px solid #701e20;
     border-radius: 0px 0px 10px 10px;
     margin-top: -2px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(249, 247, 247);
     display: none;
 }
 .chungu .chungu_list li, .jeungpyeong .jeungpyeong_list li,
@@ -120,6 +120,11 @@ aside{
     margin-top: 10px;
     font-weight: 500;
     font-size: 15px;
+}
+.chungu .chungu_list li:active, .jeungpyeong .jeungpyeong_list li:active,
+.Uiwang .Uiwang_list li:active{
+    color: #701e20;
+    font-weight: 700;
 }
 .chungu .chungu_list.event, .jeungpyeong .jeungpyeong_list.event,
 .Uiwang .Uiwang_list.event{

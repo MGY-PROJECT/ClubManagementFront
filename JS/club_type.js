@@ -11,7 +11,7 @@ const chungu_club = document.querySelector('.chungu_kinds');
 const jeungpyeong_club = document.querySelector('.jeungpyeong_kinds');
 const Uiwang_club = document.querySelector('.Uiwang_kinds');
 
-chungu.addEventListener('click', function(){
+chungu.addEventListener('click', function(){    
     chungu_list.classList.add('event');
     jeungpyeong_list.classList.remove('event');
     Uiwang_list.classList.remove('event');

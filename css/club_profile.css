@@ -1,6 +1,12 @@
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    transition: 1s;
+    line-height: 1.4;
+}
+body.event{
+    margin-top: -400px;
 }
 .dark_bg{
     background-color: #fff;
@@ -11,8 +17,25 @@ body{
     z-index: 1000;
     background-color:rgba(0,0,0,0.1);
 }
+.explanation{
+    position: absolute;
+    margin: 20px 20px;
+    color: rgb(63, 61, 61, .7);
+    font-size: 80px;
+    font-weight: 500;
+}
+.explanation_active{
+    width: 300px;
+    position: absolute;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    top: 650px;
+    margin-left: 48.5%;
+}
 a{
     text-decoration: none;
+    color: #333;
 }
 .inner{
     margin: auto;
@@ -21,52 +44,58 @@ a{
 header{
     position: relative;
     z-index: 10;
-    height: 250px;
-    border-bottom: 1px solid #333;
+    height: 550px;
 }
 header .in_file{
     width: 70px;
-    opacity: .7;
+    opacity: .9;
     position: absolute;
     top: 50%;
     left: 48%;
 }
 
 header .backImg{
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    border-radius: 0px 0px 10px 10px;
+    border-bottom: 1px solid #333;
+    background-image: url("https://user-images.githubusercontent.com/76980526/128290660-7b0f7c4f-c04e-4b36-b2e0-848821bd5fca.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 header .profile{
     position: absolute;
+    cursor: pointer;
     z-index: 10;
     width: 150px;
     height: 150px;
-    border: 1px solid #333;
+    background-image: url("https://user-images.githubusercontent.com/76980526/128286416-ed4edce4-5661-4881-954c-be5b2d9407ae.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 3px solid #333;
     border-radius: 50%;
-    top: 175px;
+    top: 470px;
     left: 45%;
 }
-header .profile .in_file{
-    position: absolute;
-    top: 65px;
-    left: 40px;
-    opacity: .5;
-}
 section{
+    opacity: 0;
     z-index: 10;
     margin: auto;
     min-height: 900px;
+    transition: 1s;
 }
 section.event{
-    background-color:rgba(0,0,0,0.5);
+    opacity: 1;
 }
 section .introduce button, section .join button, section .organization button, section .picture button{
     border-radius: 10px 10px;
     font-size: 20px;
     color: #333;
+    background-color: rgb(240, 239, 239);
     font-weight: 700;
-    width: 200px;
-    height: 80px;
+    width: 150px;
+    height: 70px;
 }
 section .introduce{
     position: absolute;
@@ -79,6 +108,7 @@ section .join{
     position: absolute;
     z-index: 10;
     margin: 20% 20%;
+    border-radius: 10px 10px;
     right: 0;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -87,38 +117,25 @@ section .organization{
     position: absolute;
     z-index: 10;
     left: 0;
-    margin: 40% 20%;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin: 30% 20%;
 }
 section .picture{
     position: absolute;
     z-index: 10;
-    margin: 40% 20%;
+    margin: 30% 20%;
     right: 0;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .introduce_section{
     opacity: 0;
     z-index: 1;
     position: fixed;
-    margin-top: -10%;
+    margin-top: -5%;
     left: 21%;
     width: 59%;
     height: 80vh;
     border-radius: 10px 10px;
     border: 1px solid #333;
     transition: 1s;
-}
-.close{
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-}   
-.introduce_section.event .close .material-icons{
-    color: #fff;
-    font-size: 50px;
 }
 .introduce_section.event{
     opacity: 1;
@@ -127,6 +144,30 @@ section .picture{
     transition: 1s;
     background-color: #333;
 }
+.all{
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    transition: .1s;
+}
+.all:hover{
+    opacity: .7;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+}
+.close{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}   
+.close .material-icons{
+    color: #fff;
+    font-size: 50px;
+}
+
 .organization_section{
     display: none;
     position: relative;
@@ -136,11 +177,69 @@ section .picture{
     background-color: rgb(164, 153, 153);
 }
 .picture_section{
-    display: none;
-    position: relative;
-    left: 22%;
-    width: 800px;
-    height: 30vh;
-    background-color: rgb(167, 48, 48);
+    opacity: 0;
+    z-index: 1;
+    position: fixed;
+    margin-top: -5%;
+    left: 21%;
+    width: 59%;
+    height: 600px;
+    border-radius: 10px 10px;
+    border: 1px solid #333;
+    background: rgba(0,0,0,0.6); /* Black w/ opacity */
+    transition: 1s;
 }
-
+.picture_section.event{
+    opacity: 1;
+    z-index: 11;
+    transform: translateY(-10px);
+    transition: 1s;
+}
+.picture_section.event .picture_inner{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    top: 10%;
+    left: 10%;
+}
+.swiper-container{
+    width: 80%;
+    right: 10%;
+}
+.swiper-container .swiper-wrapper{
+}
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+}
+.swiper-slide:nth-child(1){
+    position: absolute;
+    left: 25%;
+    background-image: url("https://user-images.githubusercontent.com/76980526/128293619-7aa13f2d-8532-44bb-8d1d-dd7262c1b455.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.picture_section.event .picture_inner .picture_{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.up_arrow{
+    width: 42px;
+    height: 42px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    display: none;
+}
+.up_arrow.event{
+    display: flex;
+}

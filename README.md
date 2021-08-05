@@ -1,3 +1,14 @@
+# 8월 5일 목요일
+## 1. 프로필 사이트 재구성
+![스크린샷 2021-08-05 오후 2 43 55](https://user-images.githubusercontent.com/76980526/128297497-87ddc2fe-c903-4cd0-90f3-8f07d1769cef.png)
+![image](https://user-images.githubusercontent.com/76980526/128298327-2955249f-867e-4a5f-a255-e93a88c90975.png)
+## 2. 각 버튼마다 창 만들기 
+### 동아리 사진 부분
+![image](https://user-images.githubusercontent.com/76980526/128298549-39f61b6a-de79-4c4b-a93c-0894fb425358.png)
+### 동아리 가입 누르면 동아리 별로 만든 설문 사이트로 이동
+<img width="1440" alt="스크린샷 2021-08-05 오후 2 55 54" src="https://user-images.githubusercontent.com/76980526/128298703-3985dc37-34a7-4bc3-8595-f5a3916ce653.png">
+
+
 # 8월 4일 수요일
 ## 1. 동아리 프로필 전체적인 틀 작업.
 <img width="898" alt="스크린샷 2021-08-04 오후 3 33 24" src="https://user-images.githubusercontent.com/76980526/128133323-9a46b33d-8ff0-4ab6-b57d-f737d39a60ae.png">

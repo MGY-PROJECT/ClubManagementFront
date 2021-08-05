@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--CSS-->
     <link rel="stylesheet" href="../css/club_profile.css">
+    <!--SWIPER-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--JS-->
     <script defer src="../JS/club_profile.js"></script>
     <title>프로필</title>
 </head>
@@ -16,17 +21,27 @@
             <!--만약 in_file에 뒤에가 .img나, jpeg, png 등 이미지 파일이라면 backImg, in_file에 event클래스 추가
             in_file에 클래스가 추가되면 display:none이 되고, backImg는 display : block으로 바뀌게 하면서 이미지를 띄우기.-->
             <div class="back">
-                <input class="in_file" type="file" name="file" accept="image/*">
+                <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
                 <div class="backImg"></div>
             </div>
             <div class="profile">
-                <input class="in_file" type="file" name="file" accept="image/*">
+                <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
+            </div>
+            <div class="explanation">   
+                한국교통대학교 밴드<br> 동아리 신문고
+            </div>
+            <div class="explanation_active">   
+                신문고
             </div>
         </div>
     </header>
     <section>
         <div class="dark_bg">
+            
             <div class="inner">
+                <div class="all">
+                    동아리 전체 보기
+                </div>
                 <div class="introduce">
                     <button>동아리 소개</button>
                 </div>
@@ -48,6 +63,9 @@
                     close
                 </span>
             </div>
+            <div class="intriduce_inner">
+
+            </div>
         </div>
         <div class="organization_section">
             <div class="close">
@@ -62,7 +80,34 @@
                     close
                 </span>
             </div>
+            <div class="picture_inner">
+                <div class="swiper-container">
+                    <!-- Additional required wrapper 필수적으로 wrapper을 만들어야 돌아칸다.-->
+                    <div class="swiper-wrapper">
+                    <!-- Slides 실제로 슬라이드가 되는 부분-->
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons 슬라이드 이전 다음 버튼-->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar 슬라이드 스크롤 바-->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
         </div>
+        <button class="up_arrow">
+            <span class="material-icons">
+                arrow_upward
+            </span>
+        </button>
     </section>
 </body>
 </html>
