@@ -144,12 +144,17 @@ const Join = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const idReg = /\d{7}/;
+    const nameReg = /^[가-힣]+$/;
     if (!idReg.test(id)) {
       alert("아이디가 잘못되었습니다.");
       return;
     }
     if (!club || !department || club === "선택" || department === "선택") {
       alert("학과나 동아리를 선택해주세요.");
+      return;
+    }
+    if (!nameReg.test(name)) {
+      alert("이름이 잘못되었습니다.");
       return;
     }
     console.log({ inputs });
