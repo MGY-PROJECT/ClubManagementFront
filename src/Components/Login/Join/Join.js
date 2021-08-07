@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useRef, useState } from "react";
 import "./Join.scss";
 
@@ -115,7 +116,7 @@ const clubs = {
   },
 };
 
-const Join = () => {
+const Join = ({ history }) => {
   const [inputs, setInputs] = useState({
     id: "",
     pw: "",
@@ -139,27 +140,6 @@ const Join = () => {
   const onClickEye = () => {
     inputPw.current.type =
       inputPw.current.type === "password" ? "type" : "password";
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const idReg = /\d{7}/;
-    const nameReg = /^[가-힣]+$/;
-    if (!idReg.test(id)) {
-      alert("아이디가 잘못되었습니다.");
-      return;
-    }
-    if (!club || !department || club === "선택" || department === "선택") {
-      alert("학과나 동아리를 선택해주세요.");
-      return;
-    }
-    if (!nameReg.test(name)) {
-      alert("이름이 잘못되었습니다.");
-      return;
-    }
-    console.log({ inputs });
-    // 비밀번호 영문 숫자 외 다른게 들어오지 않도록 regex
-    // 년도 -> 나이 정규표현식을 써서
   };
 
   const college = (depart) => {
@@ -204,6 +184,39 @@ const Join = () => {
       }
     }
     return col;
+  };
+
+  const join = async () => {
+    try {
+      await axios.post("http://localhost:5000/join", {
+        inputs,
+      });
+      history.push("/login");
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const idReg = /\d{7}/;
+    const nameReg = /^[가-힣]+$/;
+    if (!idReg.test(id)) {
+      alert("아이디가 잘못되었습니다.");
+      return;
+    }
+    if (!club || !department || club === "선택" || department === "선택") {
+      alert("학과나 동아리를 선택해주세요.");
+      return;
+    }
+    if (!nameReg.test(name)) {
+      alert("이름이 잘못되었습니다.");
+      return;
+    }
+    console.log({ inputs });
+    // 비밀번호 영문 숫자 외 다른게 들어오지 않도록 regex
+    // 년도 -> 나이 정규표현식을 써서
+    join();
   };
 
   return (

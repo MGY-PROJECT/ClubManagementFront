@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { store } from "../..";
 import "./Login.scss";
@@ -6,14 +7,30 @@ const Login = ({ history }) => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
+  const login = async () => {
+    try {
+      const res = await axios.post("http://localhost:5000/login", {
+        id,
+        pw,
+      });
+      if (res.data) {
+        sessionStorage.setItem("user", res.data);
+        store.dispatch({ type: "login" });
+      } else {
+        setId("");
+        setPw("");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("login");
-    // axios
-    store.dispatch({ type: "login" });
-    localStorage.setItem("id", id);
-    console.log(store.getState());
-    console.log(localStorage.getItem("id"));
+    const idRegex = /\d{7}/;
+    if (idRegex.test(id)) {
+      login();
+    }
   };
 
   return (
@@ -31,6 +48,7 @@ const Login = ({ history }) => {
             type="text"
             className="id"
             placeholder="학번을 입력해주세요"
+            autoFocus
             value={id}
             onChange={(e) => setId(e.target.value)}
           ></input>
