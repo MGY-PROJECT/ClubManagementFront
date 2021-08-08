@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--CSS-->
     <link rel="stylesheet" href="../css/club_profile.css">
-    <!--SWIPER-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--JS-->
     <script defer src="../JS/club_profile.js"></script>
     <title>프로필</title>
@@ -38,15 +35,17 @@
     <section>
         <div class="dark_bg">
             
-            <div class="inner">
                 <div class="all">
                     동아리 전체 보기
                 </div>
-                <div class="introduce">
+                <div class="profile_correction_text">
+                    프로필 수정
+                </div>
+                <!-- <div class="introduce">
                     <button>동아리 소개</button>
                 </div>
                 <!--동아리별 구글폼즈 or 네이버 폼즈에 설문조사 링크-->
-                <div class="join">
+                <!-- <div class="join">
                     <button>동아리 가입</button>
                 </div>
                 <div class="organization">
@@ -54,8 +53,34 @@
                 </div>
                 <div class="picture">
                     <button>동아리 사진</button>
+                </div>  -->
+                <div class="box">
+                    <div class="left">
+                        <div class="introduces">
+                            <div class="text">동아리 소개 <br>
+                                <span class="material-icons">
+                                    perm_contact_calendar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="joins">
+                            <div class="text">동아리 가입 <br>
+                                <span class="material-icons">
+                                    group_add
+                                </span>                      
+                            </div>  
+                        </div>
+                        <div class="pictures">
+                            <div class="text">동아리 사진 <br>
+                                <span class="material-icons">
+                                    collections
+                                </span>                      
+                            </div>  
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="introduce_section">
             <div class="close">
@@ -80,25 +105,20 @@
                     close
                 </span>
             </div>
-            <div class="picture_inner">
-                <div class="swiper-container">
-                    <!-- Additional required wrapper 필수적으로 wrapper을 만들어야 돌아칸다.-->
+            <!-- <div class="picture_inner"> -->
+                <!-- <div class="swiper-container">
                     <div class="swiper-wrapper">
-                    <!-- Slides 실제로 슬라이드가 되는 부분-->
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                     </div>
-                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 
-                    <!-- If we need navigation buttons 슬라이드 이전 다음 버튼-->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 
-                    <!-- If we need scrollbar 슬라이드 스크롤 바-->
                     <div class="swiper-scrollbar"></div>
                 </div>
             </div>
@@ -107,7 +127,15 @@
             <span class="material-icons">
                 arrow_upward
             </span>
-        </button>
+        </button> -->
+        <div class="slide">
+            <ul class="picture_inner">
+                <li class="picture"></li>
+                <li class="picture"></li>
+                <li class="picture"></li>
+                <li class="picture"></li>
+            </ul>
+        </div>
     </section>
 </body>
 </html>

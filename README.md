@@ -1,3 +1,10 @@
+# 8월 8일 일요일
+## 1. 프로필 사이트 하단부분 변경 색이나 디자인은 다 같이 회의 해보고 결정 할 예정(마우스 가져다 대면 효과 지정)
+![image](https://user-images.githubusercontent.com/76980526/128630068-e5e85745-9dbd-4021-8a0f-c174f680a5bf.png)
+## 2. 동아리 사진 클릭 시 슬라이드 생성 (시간이 지나면 자동으로 넘어감.)
+![image](https://user-images.githubusercontent.com/76980526/128630098-f0be9761-e27e-4504-be4b-7eec481e0153.png)
+## 3. 위에 동아리 수정 버튼을 누르면 각 부분마다 파일에서 이미지 삽입할 수 있도록 할 예정 (내일 작업)
+
 # 8월 5일 목요일
 ## 1. 프로필 사이트 재구성
 ![스크린샷 2021-08-05 오후 2 43 55](https://user-images.githubusercontent.com/76980526/128297497-87ddc2fe-c903-4cd0-90f3-8f07d1769cef.png)

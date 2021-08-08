@@ -5,6 +5,9 @@ body{
     transition: 1s;
     line-height: 1.4;
 }
+ul li{
+    list-style: none;
+}
 body.event{
     margin-top: -400px;
 }
@@ -88,7 +91,7 @@ section{
 section.event{
     opacity: 1;
 }
-section .introduce button, section .join button, section .organization button, section .picture button{
+/* section .introduce button, section .join button, section .organization button, section .picture button{
     border-radius: 10px 10px;
     font-size: 20px;
     color: #333;
@@ -98,11 +101,7 @@ section .introduce button, section .join button, section .organization button, s
     height: 70px;
 }
 section .introduce{
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    margin: 20% 20%;
-
+    
 }
 section .join{
     position: absolute;
@@ -110,8 +109,8 @@ section .join{
     margin: 20% 20%;
     border-radius: 10px 10px;
     right: 0;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 section .organization{
     position: absolute;
@@ -124,29 +123,128 @@ section .picture{
     z-index: 10;
     margin: 30% 20%;
     right: 0;
+} */
+/* 수정 중 */
+.box{
+    position: relative;
+    margin: auto;
+    width: 1080px;
+    display: flex;
 }
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+}
+.introduces .text{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+section .introduces{
+    position: relative;
+    border-radius: 10px 10px;
+    cursor: pointer;
+    z-index: 10;
+    margin: 100px 0px auto;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    font-size: 40px;
+    color: aliceblue;
+    font-weight: 700;
+    background-color: #52504e;
+    transition: .7s;
+}
+section .introduces.event{
+    background-color: rgb(180, 182, 196);
+    transform: translateY(-10px);
+}
+section .introduces .material-icons{
+    font-size: 40px;
+    vertical-align: middle;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+section .joins{
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 10;
+    margin: 100px 0px auto;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #333;
+    transition: .5s;
+}
+section .joins:hover{
+    background-color: rgb(197, 211, 211);
+    color: #333;
+    transform: translateY(-10px);
+}
+section .joins .material-icons{
+    font-size: 40px;
+    vertical-align: middle;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+section .pictures{
+    cursor: pointer;
+    position: relative;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #333;
+    transition: .5s;
+}
+section .pictures:hover{
+    background-color: rgb(197, 211, 211);
+    color: #333;
+    transform: translateY(-20px);
+}
+section .pictures .material-icons{
+    font-size: 40px;
+    vertical-align: middle;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+/* 여가까지 */
 .introduce_section{
     opacity: 0;
     z-index: 1;
-    position: fixed;
-    margin-top: -5%;
+    position: absolute;
+    top: 100px;
     left: 21%;
     width: 59%;
     height: 80vh;
     border-radius: 10px 10px;
     border: 1px solid #333;
-    transition: 1s;
+    transition: .7s;
 }
 .introduce_section.event{
     opacity: 1;
     z-index: 11;
     transform: translateY(-10px);
-    transition: 1s;
+    transition: .7s;
     background-color: #333;
 }
 .all{
     position: absolute;
     z-index: 10;
+    margin: 50px;
     font-size: 20px;
     font-weight: 700;
     color: #333;
@@ -154,6 +252,21 @@ section .picture{
     transition: .1s;
 }
 .all:hover{
+    opacity: .7;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+}
+.profile_correction_text{
+    display: inline;
+    z-index: 10;
+    margin:50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    transition: .1s;
+}
+.profile_correction_text:hover{
     opacity: .7;
     border-bottom: 2px solid #333;
     border-right: 2px solid #333;
@@ -179,15 +292,16 @@ section .picture{
 .picture_section{
     opacity: 0;
     z-index: 1;
+    top: 100px;
+    overflow: hidden;
     position: fixed;
-    margin-top: -5%;
     left: 21%;
     width: 59%;
     height: 600px;
     border-radius: 10px 10px;
     border: 1px solid #333;
     background: rgba(0,0,0,0.6); /* Black w/ opacity */
-    transition: 1s;
+    transition: .5s;
 }
 .picture_section.event{
     opacity: 1;
@@ -195,13 +309,40 @@ section .picture{
     transform: translateY(-10px);
     transition: 1s;
 }
-.picture_section.event .picture_inner{
+/* .picture_section.event .picture_inner{
     position: absolute;
     width: 100%;
     height: 80%;
     display: flex;
     top: 10%;
     left: 10%;
+} */
+
+.picture_inner{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 70%;
+    margin-top: 10%;
+}
+.picture{
+    position: relative;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+}
+.picture:nth-child(1){
+    background-color: beige;
+}
+.picture:nth-child(2){
+    background-color: #52504e;
+}
+.picture:nth-child(3){
+    background-color: aqua;
+}
+.picture:nth-child(4){
+    background-color: #a0cd2e;
 }
 .swiper-container{
     width: 80%;
