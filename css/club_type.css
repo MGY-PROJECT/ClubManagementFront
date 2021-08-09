@@ -228,6 +228,7 @@ section .chungu_kinds .first_line{
     align-items: center;
 }
 section .chungu_kinds .second_line,
+section .chungu_kinds .third_line,
 section .jeungpyeong_kinds .second_line,
 section .Uiwang_kinds .second_line{
     display: flex;
@@ -238,12 +239,61 @@ section .Uiwang_kinds .second_line{
 section .chungu_kinds .club,
 section .jeungpyeong_kinds .club,
 section .Uiwang_kinds .club{
+    position: relative;
+    cursor: pointer;
     width: 200px;
     height: 300px;
     margin: 120px 20px;
     box-sizing:content-box;
     border-radius: 10px 10px;
     border: 1px solid #333;
+    overflow: hidden;
+}
+.club_text{
+    position: absolute;
+    color: rgb(165, 162, 162);
+    z-index: 1;
+    font-weight: 700;
+    font-size: 30px;
+}
+.club_img{
+    border-radius: 10px 10px;
+    position: absolute;
+    background-size: cover;
+    margin-top: -30px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.club_img_hover{
+    position: absolute;
+    border-radius: 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+.club_text_hover{
+    position: absolute;
+    font-size: 23px;
+    margin-left: 30%;
+    color: rgb(255, 255, 255);
+}
+.club_original{
+    border-radius: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    background-size: contain;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    transition: .7s;
+    width: 100%;
+    height: 100%;
+}
+.club_original:hover{
+    position: absolute;
+    transform: translateY(-330px);
+}
+.club_hover.event{
+    transform: translateY(0px);
 }
 /*분과 별로 클릭 시 보여지는 프르필*/
 .sport, .music, .volunteer{

@@ -1,3 +1,17 @@
+# 8월 10일 화요일
+## 1. 파일 선택하면 배경, 프로필, 동아리 사진 지정(동아리 사진은 아직 한개만 지정 가능..), 버튼 디자인 수정 예정
+![image](https://user-images.githubusercontent.com/76980526/128745923-a6616cf6-9906-4c51-bcbe-c45d28973638.png)
+![image](https://user-images.githubusercontent.com/76980526/128746136-437e7950-6548-400e-b7ed-afce0dbc9e66.png)
+![image](https://user-images.githubusercontent.com/76980526/128746339-2aa491d9-5581-46d8-a5bc-68d4838743cb.png)
+## 2. 동아리 종류 페이지에 각각 동아리 선택 부분 수정
+### 마우스 올리기 전
+![image](https://user-images.githubusercontent.com/76980526/128746526-080e0898-d1e9-4df4-b720-2a7cd6905d75.png)
+### 마우스 올린 후
+![image](https://user-images.githubusercontent.com/76980526/128746684-f1ad0628-ef87-4fad-afb1-08b4e8576a28.png)
+
+# 해야될 일 
+## 1) 동아리 이미지 선택하면 각각 지정되도록 하기 2) text 부분 원하는 글로 수정 가능하게 만들기 3) 전체적인 디자인 상의 후 결정(색, 모양 등등)
+
 # 8월 8일 일요일
 ## 1. 프로필 사이트 하단부분 변경 색이나 디자인은 다 같이 회의 해보고 결정 할 예정(마우스 가져다 대면 효과 지정)
 ![image](https://user-images.githubusercontent.com/76980526/128630068-e5e85745-9dbd-4021-8a0f-c174f680a5bf.png)

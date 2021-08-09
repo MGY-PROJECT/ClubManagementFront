@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: 1s;
     line-height: 1.4;
 }
@@ -57,17 +57,16 @@ header .in_file{
     left: 48%;
 }
 
-header .backImg{
+#backImg{
     position: absolute;
     width: 100%;
     height: 550px;
     border-radius: 0px 0px 10px 10px;
     border-bottom: 1px solid #333;
-    background-image: url("https://user-images.githubusercontent.com/76980526/128290660-7b0f7c4f-c04e-4b36-b2e0-848821bd5fca.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
 }
-header .profile{
+#profile{
     position: absolute;
     cursor: pointer;
     z-index: 10;
@@ -271,16 +270,70 @@ section .pictures .material-icons{
     border-bottom: 2px solid #333;
     border-right: 2px solid #333;
 }
+/* 사진선택 부분 */
+.profile_correction{
+    opacity: 0;
+    z-index: 1;
+    top: 100px;
+    overflow: hidden;
+    position: fixed;
+    left: 21%;
+    width: 59%;
+    height: 600px;
+    border-radius: 10px 10px;
+    border: 1px solid #333;
+    background: rgba(0,0,0,0.6); /* Black w/ opacity */
+    transition: .5s;
+}
+.profile_correction.event{
+    opacity: 1;
+    z-index: 11;
+    transform: translateY(-10px);
+    transition: .5s;
+}
+.profile_correction .profile_choice{
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+.profile_correction .profile_choice input{
+    font-size: 20px;
+    width: 90px;
+    margin-right: 10px;
+}
+.profile_correction .backImage_choice{
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+.profile_correction .backImage_choice input{
+    font-size: 20px;
+    width: 90px;
+    margin-right: 10px;
+}
+.profile_correction .picture_choice{
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+.profile_correction .picture_choice input{
+    font-size: 20px;
+    width: 90px;
+    margin-right: 10px;
+}
 .close{
     cursor: pointer;
     position: absolute;
+    z-index: 1;
     right: 0;
 }   
 .close .material-icons{
-    color: #fff;
+    color: rgb(216, 211, 211);
     font-size: 50px;
 }
-
 .organization_section{
     display: none;
     position: relative;
@@ -326,39 +379,23 @@ section .pictures .material-icons{
     width: 70%;
     margin-top: 10%;
 }
-.picture{
+#slide_img{
     position: relative;
     left: -40px;
     width: 100%;
     height: 100%;
 }
-.picture:nth-child(1){
+#slide_img:nth-child(1){
     background-color: beige;
 }
-.picture:nth-child(2){
+#slide_img:nth-child(2){
     background-color: #52504e;
 }
-.picture:nth-child(3){
+#slide_img:nth-child(3){
     background-color: aqua;
 }
-.picture:nth-child(4){
+#slide_img:nth-child(4){
     background-color: #a0cd2e;
-}
-.swiper-container{
-    width: 80%;
-    right: 10%;
-}
-.swiper-container .swiper-wrapper{
-}
-.swiper-button-prev, .swiper-button-next{
-    color: #fff;
-}
-.swiper-slide:nth-child(1){
-    position: absolute;
-    left: 25%;
-    background-image: url("https://user-images.githubusercontent.com/76980526/128293619-7aa13f2d-8532-44bb-8d1d-dd7262c1b455.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .picture_section.event .picture_inner .picture_{
     position: absolute;

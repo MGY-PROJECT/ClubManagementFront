@@ -19,17 +19,19 @@
             in_file에 클래스가 추가되면 display:none이 되고, backImg는 display : block으로 바뀌게 하면서 이미지를 띄우기.-->
             <div class="back">
                 <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
-                <div class="backImg"></div>
+                <!-- <div id="backImg"></div> -->
+                <img id="backImg" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
             </div>
             <div class="profile">
                 <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
             </div>
+            <img id="profile" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
             <div class="explanation">   
                 한국교통대학교 밴드<br> 동아리 신문고
             </div>
-            <div class="explanation_active">   
+            <!-- <div class="explanation_active">   
                 신문고
-            </div>
+            </div> -->
         </div>
     </header>
     <section>
@@ -41,19 +43,6 @@
                 <div class="profile_correction_text">
                     프로필 수정
                 </div>
-                <!-- <div class="introduce">
-                    <button>동아리 소개</button>
-                </div>
-                <!--동아리별 구글폼즈 or 네이버 폼즈에 설문조사 링크-->
-                <!-- <div class="join">
-                    <button>동아리 가입</button>
-                </div>
-                <div class="organization">
-                    <button>조직도</button>
-                </div>
-                <div class="picture">
-                    <button>동아리 사진</button>
-                </div>  -->
                 <div class="box">
                     <div class="left">
                         <div class="introduces">
@@ -82,6 +71,16 @@
                     </div>
                 </div>
         </div>
+        <div class="profile_correction">
+            <div class="close">
+                <span class="material-icons">
+                    close
+                </span>
+            </div>
+            <div class="profile_choice"><input style="display: block;" type="file" id="input-profile" required>프로필 사진 선택</div>
+            <div class="backImage_choice"><input style="display: block;" type="file" id="input-backImg" required>배경화면 선택</div>
+            <div class="picture_choice"><input multiple = "multiple" style="display: block;" type="file" id="input-slide" class="input-slide" required>동아리 사진 선택(최대 4장)</div>
+        </div>
         <div class="introduce_section">
             <div class="close">
                 <span class="material-icons">
@@ -105,35 +104,8 @@
                     close
                 </span>
             </div>
-            <!-- <div class="picture_inner"> -->
-                <!-- <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
-        </div>
-        <button class="up_arrow">
-            <span class="material-icons">
-                arrow_upward
-            </span>
-        </button> -->
         <div class="slide">
             <ul class="picture_inner">
-                <li class="picture"></li>
-                <li class="picture"></li>
-                <li class="picture"></li>
-                <li class="picture"></li>
             </ul>
         </div>
     </section>

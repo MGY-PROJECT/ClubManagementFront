@@ -175,3 +175,12 @@ const up_arrow = document.querySelector('.up_arrow');
 up_arrow.addEventListener('click', function(){
     window.scrollBy(0, -10000);
 })
+
+// 동아리 누르면 프로필로 이동
+const club = document.querySelectorAll('.club');
+for(var i = 0; i < club.length; i++){
+    club[i].addEventListener('click',function(){
+        location.href = 'http://127.0.0.1:5500/html/club_profile.html';
+    })
+}
+
