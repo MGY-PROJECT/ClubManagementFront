@@ -1,3 +1,11 @@
+# 8월 11일 화요일
+## 1. 초기 화면은 이렇게 비어있지만 동아리 수정 창에서 원하는 text 입력 후 설정을 누르면 세번째 사진처럼 변경된다.
+![image](https://user-images.githubusercontent.com/76980526/128983497-690e0c9c-007b-4d60-a35b-577e50773c3f.png)
+![image](https://user-images.githubusercontent.com/76980526/128983624-72a89d2a-e314-4185-8945-f83b53751bee.png)
+![image](https://user-images.githubusercontent.com/76980526/128983997-0c55e13e-dd17-47b3-bc7a-ffe18c983bc4.png)
+## 2. 프로필 수정에서 동아리 사진을 여러 개 지정하면 여러 장이 선택 돼서 나온다. 나온 사진들은 슬라이드 적용.
+![image](https://user-images.githubusercontent.com/76980526/128984425-a1adc600-db33-4b6f-9cac-440ee689f6b0.png)
+![image](https://user-images.githubusercontent.com/76980526/128984726-2efa0b7e-eb69-4c5b-9a1b-1c40e59cf0d6.png)
 # 8월 10일 화요일
 ## 1. 파일 선택하면 배경, 프로필, 동아리 사진 지정(동아리 사진은 아직 한개만 지정 가능..), 버튼 디자인 수정 예정
 ![image](https://user-images.githubusercontent.com/76980526/128745923-a6616cf6-9906-4c51-bcbe-c45d28973638.png)

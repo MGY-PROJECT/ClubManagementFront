@@ -26,9 +26,7 @@
                 <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
             </div>
             <img id="profile" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
-            <div class="explanation">   
-                한국교통대학교 밴드<br> 동아리 신문고
-            </div>
+            <div class="explanation"></div>
             <!-- <div class="explanation_active">   
                 신문고
             </div> -->
@@ -79,7 +77,13 @@
             </div>
             <div class="profile_choice"><input style="display: block;" type="file" id="input-profile" required>프로필 사진 선택</div>
             <div class="backImage_choice"><input style="display: block;" type="file" id="input-backImg" required>배경화면 선택</div>
-            <div class="picture_choice"><input multiple = "multiple" style="display: block;" type="file" id="input-slide" class="input-slide" required>동아리 사진 선택(최대 4장)</div>
+            <!-- <div class="picture_choice"><input multiple = "multiple" style="display: block;" type="file" id="input-slide" class="input-slide" required>동아리 사진 선택1(최대 4장)</div> -->
+            <div class="picture_choice">
+                <input id="browse" type="file" onchange="previewFiles()" multiple>동아리 사진 선택
+            </div>
+            <!--form 해서 enter 기능 추가하기 -->
+            <div class="introduction">동아리 문구 작성<input id='input_name' onkeyup='printName()'/><input class = "introduction_submit" type="submit" value="설정"></div>
+            
         </div>
         <div class="introduce_section">
             <div class="close">
@@ -105,7 +109,7 @@
                 </span>
             </div>
         <div class="slide">
-            <ul class="picture_inner">
+            <ul class="picture_inner" id="picture_inner">
             </ul>
         </div>
     </section>

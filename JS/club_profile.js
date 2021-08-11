@@ -1,8 +1,8 @@
 
 const dark_bg = document.querySelectorAll('.dark_bg');
 const close = document.querySelectorAll('.close');
-const introduce = document.querySelector('.introduces'); // 동아리 소개 버튼
-const introduce_view = document.querySelector('.introduce_section'); // 동아리 소개 창
+const introduces = document.querySelector('.introduces'); // 동아리 소개 버튼
+const introduces_view = document.querySelector('.introduce_section'); // 동아리 소개 창
 const picture = document.querySelector('.pictures') // 동아리 사진 버튼
 const picture_view = document.querySelector('.picture_section'); // 동아리 사진 창
 
@@ -16,20 +16,20 @@ profile_correction_text.addEventListener('click', function(){
 
 
 // 동아리 소개 창 생성
-introduce.addEventListener('click', function(){
-    introduce_view.classList.add('event');
+introduces.addEventListener('click', function(){
+    introduces_view.classList.add('event');
     for(var i = 0; i < dark_bg.length; i++){
         dark_bg[i].classList.add('event');
     }
 })
-introduce.addEventListener('mouseover',function(){
-    introduce.classList.add('event');
+introduces.addEventListener('mouseover',function(){
+    introduces.classList.add('event');
 })
-introduce.addEventListener('mouseout',function(){
-    introduce.classList.remove('event');
+introduces.addEventListener('mouseout',function(){
+    introduces.classList.remove('event');
 })
 
-// // 동아리 사진 창 생성
+// 동아리 사진 창 생성
 picture.addEventListener('click', function(){
     picture_view.classList.add('event');
     slide();
@@ -41,7 +41,7 @@ for(var i = 0; i < close.length; i++){
     close[i].addEventListener('click', function(){
         // close를 누르면 화면 사라지도록 하기
         profile_correction.classList.remove('event');
-        introduce_view.classList.remove('event'); 
+        introduces_view.classList.remove('event'); 
         picture_view.classList.remove('event');
         for(var j = 0; j < dark_bg.length; j++){
             dark_bg[j].classList.remove('event');
@@ -82,8 +82,8 @@ all.addEventListener('click', function(){
 
 
 // 이미지 파일 선택시 특정 지역에 선언
-// 프로필 지정
 const reader = new FileReader();
+// 프로필 지정
 
 function readImage_profile(input){
     if(input.files && input.files[0]){
@@ -118,38 +118,65 @@ input_backImg.addEventListener("change", e => {
 // 슬라이드 화면 지정
 // li 생성시키는 변수, li의 id 명은 slide_img이다.
 /* 다시 짜기 */
-const slide_img = document.createElement('img'); // li 생성
-const slide_img_count = 4;
-const slide_ul = document.querySelector(".picture_inner"); // ul 지정
-slide_img.className = "slide_img"; //생성되는 li의 클래스 이름은 slide_img로 지정.
-slide_img.id = "slide_img"; // 생성되는 li의 id명은 slide_img로 지정.
-const slide_s = document.querySelectorAll('.slide_img'); // slide_s는 slide_li 즉, slide_img의 전체 개수를 지정.
+// const slide_img = document.createElement('img'); // li 생성
+// const slide_img_count = 4;
+// const slide_ul = document.querySelector(".picture_inner"); // ul 지정
+// slide_img.className = "slide_img"; //생성되는 li의 클래스 이름은 slide_img로 지정.
+// slide_img.id = "slide_img"; // 생성되는 li의 id명은 slide_img로 지정.
+// const slide_s = document.querySelectorAll('.slide_img'); // slide_s는 slide_li 즉, slide_img의 전체 개수를 지정.
 
-function readImg_slide(input){
-    // 함수 실행 시 img 생성.
-        slide_ul.appendChild(slide_img);
-        if(input.files && input.files[0]){
-            reader.onload = e => {
-                // 파일이 생성되면 ul안에 li태그가 생성된다. li태그는 위에서 id, class이름을 slide_img로 설정.
+// function readImg_slide(input){
+//     // 함수 실행 시 img 생성.
+//         slide_ul.appendChild(slide_img);
+//         if(input.files && input.files[0]){
+//             reader.onload = e => {
+//                 // 파일이 생성되면 ul안에 li태그가 생성된다. li태그는 위에서 id, class이름을 slide_img로 설정.
                 
-                // 
-                // li의 경로는 이벤트가 발생된 대상. result로 url을 출력해서 지정.
-                slide_img.src = e.target.result;
-            }
-            //
-            reader.readAsDataURL(input.files[0]);
-            alert("동아리 사진이 설정되었습니다.");
-        }
-        // else{
-        //     alert("최대 4장 까지만 설정 가능합니다.")
-        // }
-}
-const input_slide = document.querySelector('.input-slide');
-input_slide.addEventListener('change', e => {
-    readImg_slide(e.target);
-})
+//                 // 
+//                 // li의 경로는 이벤트가 발생된 대상. result로 url을 출력해서 지정.
+//                 slide_img.src = e.target.result;
+//             }
+//             //
+//             reader.readAsDataURL(input.files[0]);
+//             alert("동아리 사진이 설정되었습니다.");
+//         }
+//         // else{
+//         //     alert("최대 4장 까지만 설정 가능합니다.")
+//         // }
+// }
+// const input_slide = document.querySelector('.input-slide');
+// input_slide.addEventListener('change', e => {
+//     readImg_slide(e.target);
+// })
 
+  function previewFiles() {
 
+    const slide_ul = document.querySelector("#picture_inner"); // ul 지정
+    var files   = document.querySelector('.picture_choice input[type=file]').files; // 파일 선택 부분
+  
+    function readAndPreview(file) {
+  
+      // `file.name` 형태의 확장자 규칙에 주의하세요
+      if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+        const reader = new FileReader();
+  
+        reader.addEventListener("load", function () {
+          var image = new Image();
+          image.src = this.result;
+          slide_ul.appendChild( image );
+          alert("동아리 사진이 지정되었습니다.");
+        }, false);
+  
+        reader.readAsDataURL(file);
+      }
+  
+    }
+  
+    if (files) {
+      [].forEach.call(files, readAndPreview);
+    }
+  
+  }
 // 사진 슬라이드 
 const slide = _ =>{
     const wrap = document.querySelector('.slide'); // slide 선택
@@ -165,3 +192,17 @@ const slide = _ =>{
         ul.style.marginLeft = `${-pos * 100}%` // 장면 전환
     }, 3000) 
 }
+
+
+// 동아리 문구 설정
+const introduce_submit = document.querySelector('.introduction .introduction_submit'); // 전송 창
+const explanation = document.querySelector('.explanation');
+
+
+function printName()  {
+    const input_text = document.getElementById('input_name').value;
+    introduce_submit.addEventListener('click', function(){
+        explanation.innerText = input_text;
+        // alert("동아리 문구 설정이 완료 되었습니다.");
+    })
+  }

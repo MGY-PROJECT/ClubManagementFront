@@ -324,6 +324,13 @@ section .pictures .material-icons{
     width: 90px;
     margin-right: 10px;
 }
+.introduction{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.introduces input{
+}
 .close{
     cursor: pointer;
     position: absolute;
@@ -375,27 +382,17 @@ section .pictures .material-icons{
     position: absolute;
     display: flex;
     align-items: center;
-    height: 60%;
+    height: 70%;
     width: 70%;
     margin-top: 10%;
 }
-#slide_img{
+.picture_inner img{
     position: relative;
-    left: -40px;
+    background-repeat: no-repeat;
+    margin: auto;
     width: 100%;
+    left: -40px;
     height: 100%;
-}
-#slide_img:nth-child(1){
-    background-color: beige;
-}
-#slide_img:nth-child(2){
-    background-color: #52504e;
-}
-#slide_img:nth-child(3){
-    background-color: aqua;
-}
-#slide_img:nth-child(4){
-    background-color: #a0cd2e;
 }
 .picture_section.event .picture_inner .picture_{
     position: absolute;
