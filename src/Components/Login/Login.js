@@ -49,6 +49,7 @@ const Login = ({ history }) => {
             className="id"
             placeholder="학번을 입력해주세요"
             autoFocus
+            required
             value={id}
             onChange={(e) => setId(e.target.value)}
           ></input>
@@ -56,6 +57,7 @@ const Login = ({ history }) => {
             type="password"
             className="pw"
             placeholder="비밀번호를 입력해주세요"
+            required
             value={pw}
             onChange={(e) => setPw(e.target.value)}
           ></input>
@@ -63,7 +65,7 @@ const Login = ({ history }) => {
             <p onClick={() => history.push("/join")} className="p">
               회원가입
             </p>
-            <p onClick={() => history.push("/find_pw")} className="p">
+            <p onClick={() => alert("제작중...")} className="p">
               비밀번호 찾기
             </p>
           </div>
