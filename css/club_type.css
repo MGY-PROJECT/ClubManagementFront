@@ -171,9 +171,14 @@ section .call .material-icons{
     margin: 30px;
 }
 /*손봐야 될 부분*/
-.search_button{
+.search_button:nth-child(1){
     position: absolute;
-    top: 10%;
+    top: 7%;
+    right: 400px;
+}
+.search_button:nth-child(2){
+    position: absolute;
+    top: 30%;
     right: 400px;
 }
 .search_button.event{
@@ -201,9 +206,6 @@ section .call .material-icons{
 }
 .search_button .material-icons.event{
     opacity: 0;
-}
-.chungu_kinds .search_button{
-    margin-top: 40px;
 }
 .chungu_kinds, .jeungpyeong_kinds, .Uiwang_kinds{
     margin-top: 100px;
@@ -259,6 +261,7 @@ section .Uiwang_kinds .club{
 .club_img{
     border-radius: 10px 10px;
     position: absolute;
+    background-color: #fff;
     background-size: cover;
     margin-top: -30px;
     background-repeat: no-repeat;
@@ -270,6 +273,8 @@ section .Uiwang_kinds .club{
     border-radius: 10px 10px;
     width: 100%;
     height: 100%;
+    background-image: url("https://www.ut.ac.kr/html/intro/images/intro_bg_2007.jpg");
+    background-size: cover;
 }
 .club_text_hover{
     position: absolute;

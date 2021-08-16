@@ -13,23 +13,13 @@
 <body>
     <header>
         <div class="dark_bg">
-            <!--만약 파일 이름이 정해지면 경로가 background-image로 지정되도록 하기
-            밑에 배경 이미지 틀을 display : none; 으로 지정 후 파일이 선택되면 display: block;으로 바뀌면서 화면 뜨게 해보기-->
-            <!--만약 in_file에 뒤에가 .img나, jpeg, png 등 이미지 파일이라면 backImg, in_file에 event클래스 추가
-            in_file에 클래스가 추가되면 display:none이 되고, backImg는 display : block으로 바뀌게 하면서 이미지를 띄우기.-->
             <div class="back">
-                <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
-                <!-- <div id="backImg"></div> -->
                 <img id="backImg" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
             </div>
             <div class="profile">
-                <!-- <input class="in_file" type="file" name="file" accept="image/*"> -->
             </div>
             <img id="profile" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
             <div class="explanation"></div>
-            <!-- <div class="explanation_active">   
-                신문고
-            </div> -->
         </div>
     </header>
     <section>
@@ -75,7 +65,7 @@
                     close
                 </span>
             </div>
-            <div class="profile_choice"><input style="display: block;" type="file" id="input-profile" required>프로필 사진 선택</div>
+            <div class="profile_choice"><input style="display: block;" type="file" id="input-profile" required value="프로필 사진 선택">프로필 사진 선택</div>
             <div class="backImage_choice"><input style="display: block;" type="file" id="input-backImg" required>배경화면 선택</div>
             <!-- <div class="picture_choice"><input multiple = "multiple" style="display: block;" type="file" id="input-slide" class="input-slide" required>동아리 사진 선택1(최대 4장)</div> -->
             <div class="picture_choice">
@@ -83,7 +73,7 @@
             </div>
             <!--form 해서 enter 기능 추가하기 -->
             <div class="introduction">동아리 문구 작성<input id='input_name' onkeyup='printName()'/><input class = "introduction_submit" type="submit" value="설정"></div>
-            
+            <div class="initial_value"><input type="submit" value="초기화"></div>
         </div>
         <div class="introduce_section">
             <div class="close">

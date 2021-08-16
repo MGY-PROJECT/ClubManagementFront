@@ -1,3 +1,10 @@
+# 8월 16일
+## 1. club_type.html에 안 넣었던 동아리 분과 별로 전부 다 넣기,
+## 2. 동아리 사진 넣는 곳에 사진 꽉 차지 않게 지정 + 중앙으로 지정 시키기
+![image](https://user-images.githubusercontent.com/76980526/129597578-fc3a7b1f-c9fa-48ea-bde4-b4a40d8c88dd.png)
+## 3. profile.html 창 크기 줄이면 header부분 밀리는거 수정.
+<br>
+
 # 8월 11일 화요일
 ## 1. 초기 화면은 이렇게 비어있지만 동아리 수정 창에서 원하는 text 입력 후 설정을 누르면 세번째 사진처럼 변경된다.
 ![image](https://user-images.githubusercontent.com/76980526/128983497-690e0c9c-007b-4d60-a35b-577e50773c3f.png)

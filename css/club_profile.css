@@ -22,6 +22,7 @@ body.event{
 }
 .explanation{
     position: absolute;
+    width: 700px;
     margin: 20px 20px;
     color: rgb(63, 61, 61, .7);
     font-size: 80px;
@@ -82,6 +83,7 @@ header .in_file{
 }
 section{
     opacity: 0;
+    width: 100%;
     z-index: 10;
     margin: auto;
     min-height: 900px;
@@ -90,45 +92,11 @@ section{
 section.event{
     opacity: 1;
 }
-/* section .introduce button, section .join button, section .organization button, section .picture button{
-    border-radius: 10px 10px;
-    font-size: 20px;
-    color: #333;
-    background-color: rgb(240, 239, 239);
-    font-weight: 700;
-    width: 150px;
-    height: 70px;
-}
-section .introduce{
-    
-}
-section .join{
-    position: absolute;
-    z-index: 10;
-    margin: 20% 20%;
-    border-radius: 10px 10px;
-    right: 0;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-}
-section .organization{
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    margin: 30% 20%;
-}
-section .picture{
-    position: absolute;
-    z-index: 10;
-    margin: 30% 20%;
-    right: 0;
-} */
-/* 수정 중 */
 .box{
     position: relative;
     margin: auto;
-    width: 1080px;
     display: flex;
+    font-size: 50px;
 }
 .left{
     width: 50%;
@@ -149,16 +117,15 @@ section .introduces{
     margin: 100px 0px auto;
     text-align: center;
     width: 100%;
-    height: 500px;
-    font-size: 40px;
+    height: 70vh;
     color: aliceblue;
     font-weight: 700;
     background-color: #52504e;
     transition: .7s;
 }
-section .introduces.event{
+section .introduces:hover{
     background-color: rgb(180, 182, 196);
-    transform: translateY(-10px);
+    padding-top: 10px;
 }
 section .introduces .material-icons{
     font-size: 40px;
@@ -175,8 +142,7 @@ section .joins{
     margin: 100px 0px auto;
     text-align: center;
     width: 100%;
-    height: 250px;
-    font-size: 40px;
+    height: 35vh;
     color: #fff;
     font-weight: 700;
     background-color: #333;
@@ -185,7 +151,8 @@ section .joins{
 section .joins:hover{
     background-color: rgb(197, 211, 211);
     color: #333;
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
+    padding-top: 10px;
 }
 section .joins .material-icons{
     font-size: 40px;
@@ -201,8 +168,7 @@ section .pictures{
     z-index: 10;
     text-align: center;
     width: 100%;
-    height: 250px;
-    font-size: 40px;
+    height: 35vh;
     color: #fff;
     font-weight: 700;
     background-color: #333;
@@ -211,7 +177,8 @@ section .pictures{
 section .pictures:hover{
     background-color: rgb(197, 211, 211);
     color: #333;
-    transform: translateY(-20px);
+    /* transform: translateY(-20px); */
+    padding-top: 10px;
 }
 section .pictures .material-icons{
     font-size: 40px;
@@ -382,39 +349,18 @@ section .pictures .material-icons{
     position: absolute;
     display: flex;
     align-items: center;
-    height: 70%;
-    width: 70%;
     margin-top: 10%;
 }
 .picture_inner img{
     position: relative;
     background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
-    width: 100%;
     left: -40px;
-    height: 100%;
 }
-.picture_section.event .picture_inner .picture_{
+/* .picture_section.event .picture_inner .picture_{
     position: absolute;
     width: 80%;
     height: 100%;
     background-color: aliceblue;
-}
-.up_arrow{
-    width: 42px;
-    height: 42px;
-    background-color: #333;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    display: none;
-}
-.up_arrow.event{
-    display: flex;
-}
+} */

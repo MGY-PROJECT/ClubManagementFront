@@ -73,23 +73,14 @@ all.addEventListener('click', function(){
     location.replace('http://127.0.0.1:5500/html/club_type.html');
 })
 
-
-// 화살표 누르면 사이트 상단으로 이동
-    // const up_arrow = document.querySelector('.up_arrow');
-    // up_arrow.addEventListener('click', function(){
-    //     window.scrollBy(0, -10000);
-    // })
-
-
 // 이미지 파일 선택시 특정 지역에 선언
 const reader = new FileReader();
 // 프로필 지정
-
+const profileImg= document.getElementById("profile");
 function readImage_profile(input){
     if(input.files && input.files[0]){
         reader.onload = e => {
-            const backImg= document.getElementById("profile");
-            backImg.src = e.target.result;
+            profileImg.src = e.target.result;
         }   
         reader.readAsDataURL(input.files[0]);
         alert("프로필 설정이 완료되었습니다.");
@@ -100,10 +91,10 @@ input_profile.addEventListener("change", e => {
     readImage_profile(e.target);
 })
 // 배경화면 자정
+const backImg= document.getElementById("backImg");
 function readImage_backImg(input){
     if(input.files && input.files[0]){
         reader.onload = e => {
-            const backImg= document.getElementById("backImg");
             backImg.src = e.target.result;
         }   
         reader.readAsDataURL(input.files[0]);
@@ -116,47 +107,13 @@ input_backImg.addEventListener("change", e => {
 })
 
 // 슬라이드 화면 지정
-// li 생성시키는 변수, li의 id 명은 slide_img이다.
-/* 다시 짜기 */
-// const slide_img = document.createElement('img'); // li 생성
-// const slide_img_count = 4;
-// const slide_ul = document.querySelector(".picture_inner"); // ul 지정
-// slide_img.className = "slide_img"; //생성되는 li의 클래스 이름은 slide_img로 지정.
-// slide_img.id = "slide_img"; // 생성되는 li의 id명은 slide_img로 지정.
-// const slide_s = document.querySelectorAll('.slide_img'); // slide_s는 slide_li 즉, slide_img의 전체 개수를 지정.
-
-// function readImg_slide(input){
-//     // 함수 실행 시 img 생성.
-//         slide_ul.appendChild(slide_img);
-//         if(input.files && input.files[0]){
-//             reader.onload = e => {
-//                 // 파일이 생성되면 ul안에 li태그가 생성된다. li태그는 위에서 id, class이름을 slide_img로 설정.
-                
-//                 // 
-//                 // li의 경로는 이벤트가 발생된 대상. result로 url을 출력해서 지정.
-//                 slide_img.src = e.target.result;
-//             }
-//             //
-//             reader.readAsDataURL(input.files[0]);
-//             alert("동아리 사진이 설정되었습니다.");
-//         }
-//         // else{
-//         //     alert("최대 4장 까지만 설정 가능합니다.")
-//         // }
-// }
-// const input_slide = document.querySelector('.input-slide');
-// input_slide.addEventListener('change', e => {
-//     readImg_slide(e.target);
-// })
-
+const slide_ul = document.querySelector("#picture_inner"); // ul 지정
   function previewFiles() {
 
-    const slide_ul = document.querySelector("#picture_inner"); // ul 지정
     var files   = document.querySelector('.picture_choice input[type=file]').files; // 파일 선택 부분
   
     function readAndPreview(file) {
   
-      // `file.name` 형태의 확장자 규칙에 주의하세요
       if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
         const reader = new FileReader();
   
@@ -177,15 +134,15 @@ input_backImg.addEventListener("change", e => {
     }
   
   }
-// 사진 슬라이드 
-const slide = _ =>{
-    const wrap = document.querySelector('.slide'); // slide 선택
-    const ul = wrap.children[0]; // ul 선택
-    const len = ul.children.length; // li 개수
 
+// 사진 슬라이드 
+const wrap = document.querySelector('.slide'); // slide 선택
+const slide = _ =>{
+    const ul = wrap.children[0]; // ul 선택
+    let len = ul.children.length; // li 개수
     ul.style.cssText = `width: calc(100% * ${len});display : flex; transition : 1s;`;
     Array.from(ul.children).
-    forEach(ele => ele.style.cssText = `width: calc(100% / ${len});`)
+    forEach(ele => ele.style.cssText = `width: calc(50% / ${len}); height : 500px`)
     let pos = 0;
     setInterval(() => {
         pos = (pos + 1) % len // 장면 선택
@@ -203,6 +160,18 @@ function printName()  {
     const input_text = document.getElementById('input_name').value;
     introduce_submit.addEventListener('click', function(){
         explanation.innerText = input_text;
-        // alert("동아리 문구 설정이 완료 되었습니다.");
     })
-  }
+}
+
+// 초기화
+const initial_value = document.querySelector('.initial_value input');
+const slide_del = slide_ul.children;
+initial_value.addEventListener('click', function(){
+    explanation.innerText = " "; // 소개글 초기화
+    backImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 배경 초기화
+    profileImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 프로필 초기화
+    for(var i = 0; i <= slide_del.length; i++){
+        slide_del[i].remove();
+    }
+    alert("초기화 되었습니다!");
+})
