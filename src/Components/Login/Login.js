@@ -1,11 +1,19 @@
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { store } from "../..";
 import "./Login.scss";
 
 const Login = ({ history }) => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+
+  const inputPw = useRef(null);
+  const eye = useRef(null);
+
+  const onClickEye = () => {
+    inputPw.current.type =
+      inputPw.current.type === "password" ? "type" : "password";
+  };
 
   const login = async () => {
     try {
@@ -58,9 +66,11 @@ const Login = ({ history }) => {
             className="pw"
             placeholder="비밀번호를 입력해주세요"
             required
+            ref={inputPw}
             value={pw}
             onChange={(e) => setPw(e.target.value)}
           ></input>
+          <i className="fas fa-eye" ref={eye} onClick={onClickEye}></i>
           <div className="find_join">
             <p onClick={() => history.push("/join")} className="p">
               회원가입
