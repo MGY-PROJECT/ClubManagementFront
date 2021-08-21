@@ -32,7 +32,6 @@ introduces.addEventListener('mouseout',function(){
 // 동아리 사진 창 생성
 picture.addEventListener('click', function(){
     picture_view.classList.add('event');
-    slide();
     for(var i = 0; i < dark_bg.length; i++){
         dark_bg[i].classList.add('event');
     }
@@ -77,7 +76,8 @@ all.addEventListener('click', function(){
 const reader = new FileReader();
 // 프로필 지정
 const profileImg= document.getElementById("profile");
-function readImage_profile(input){
+
+const readImage_profile =  async(input) => {
     if(input.files && input.files[0]){
         reader.onload = e => {
             profileImg.src = e.target.result;
@@ -85,7 +85,14 @@ function readImage_profile(input){
         reader.readAsDataURL(input.files[0]);
         alert("프로필 설정이 완료되었습니다.");
     }
+    // post(url,JSON.stringify(data)) // json 객체를 String 객체로 변환시켜준다. 
+    // axios
+    // .post('http://localhost5000/club_profile.html', profileImg.src)
+    // .catch(err => {
+    //     console.log("Error! : ", err);
+    // })
 }
+
 const input_profile = document.getElementById("input-profile");
 input_profile.addEventListener("change", e => {
     readImage_profile(e.target);
@@ -105,73 +112,55 @@ const input_backImg = document.getElementById("input-backImg");
 input_backImg.addEventListener("change", e => {
     readImage_backImg(e.target);
 })
-
-// 슬라이드 화면 지정
-const slide_ul = document.querySelector("#picture_inner"); // ul 지정
-  function previewFiles() {
-
+// 동아리 사진 지정
+const pic_section = document.querySelector(".picture_section");
+const big_pic_contain = document.querySelector('.picture_section img.picture_section_img');
+  const previewFiles = function() {
     var files   = document.querySelector('.picture_choice input[type=file]').files; // 파일 선택 부분
-  
     function readAndPreview(file) {
-  
       if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
         const reader = new FileReader();
-  
         reader.addEventListener("load", function () {
-          var image = new Image();
-          image.src = this.result;
-          slide_ul.appendChild( image );
+          var picture_inner = document.createElement("img");
+          pic_section.appendChild( picture_inner );
+          picture_inner.src = reader.result;
           alert("동아리 사진이 지정되었습니다.");
+          picture_inner.addEventListener('click', function(){
+            big_pic_contain.classList.add('event');
+            big_pic_contain.src = reader.result;
+            // 이미지 클릭하면 다시 사라지는 구조로 만들기
+          })
+          big_pic_contain.addEventListener('click',function(){
+              big_pic_contain.classList.remove('event');
+          })
         }, false);
-  
         reader.readAsDataURL(file);
+        // 초기화 버튼 누르면 모두 사라짐
+        var picture_inner = document.createElement("img");
+        initial_value.addEventListener('click', function(){
+            for(var i = 0; i < picture_inner[i]; i++){
+                pic_section.remove(picture_inner[i]);
+            }
+        })
       }
-  
     }
-  
     if (files) {
       [].forEach.call(files, readAndPreview);
     }
-  
   }
 
-// 사진 슬라이드 
-const wrap = document.querySelector('.slide'); // slide 선택
-const slide = _ =>{
-    const ul = wrap.children[0]; // ul 선택
-    let len = ul.children.length; // li 개수
-    ul.style.cssText = `width: calc(100% * ${len});display : flex; transition : 1s;`;
-    Array.from(ul.children).
-    forEach(ele => ele.style.cssText = `width: calc(50% / ${len}); height : 500px`)
-    let pos = 0;
-    setInterval(() => {
-        pos = (pos + 1) % len // 장면 선택
-        ul.style.marginLeft = `${-pos * 100}%` // 장면 전환
-    }, 3000) 
-}
 
-
-// 동아리 문구 설정
-const introduce_submit = document.querySelector('.introduction .introduction_submit'); // 전송 창
-const explanation = document.querySelector('.explanation');
-
-
-function printName()  {
-    const input_text = document.getElementById('input_name').value;
-    introduce_submit.addEventListener('click', function(){
-        explanation.innerText = input_text;
-    })
-}
 
 // 초기화
 const initial_value = document.querySelector('.initial_value input');
-const slide_del = slide_ul.children;
 initial_value.addEventListener('click', function(){
-    explanation.innerText = " "; // 소개글 초기화
     backImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 배경 초기화
     profileImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 프로필 초기화
-    for(var i = 0; i <= slide_del.length; i++){
-        slide_del[i].remove();
+    const picview_children =  picture_view.children;
+    // 1부터 설정하면 close창까지 사라져 버린다.
+    for(var i = 2; i < picview_children.length; i++)
+    {
+        picview_children[i].remove();   
     }
-    alert("초기화 되었습니다!");
+    alert('초기화 되었습니다.');
 })

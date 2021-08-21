@@ -320,7 +320,7 @@ section .pictures .material-icons{
     opacity: 0;
     z-index: 1;
     top: 100px;
-    overflow: hidden;
+    overflow: scroll;
     position: fixed;
     left: 21%;
     width: 59%;
@@ -335,6 +335,28 @@ section .pictures .material-icons{
     z-index: 11;
     transform: translateY(-10px);
     transition: 1s;
+}
+.picture_section.event img{
+    position: relative;
+    z-index: 100;
+    left: 50px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border: solid 1px #333;
+    transition: .5s;
+    box-shadow: 1px 1px 1px #44403b;
+}
+.picture_section img.picture_section_img{
+    position: relative;
+    display: none;
+    border-radius: 10px 10px;
+    width: 500px;
+    height: 500px;
+    margin: 5% 15%;
+}
+.picture_section img.picture_section_img.event{
+    display: block;
 }
 /* .picture_section.event .picture_inner{
     position: absolute;
