@@ -1,0 +1,32 @@
+.header_wrapper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  .header_img {
+    background-image: url("https://www.ut.ac.kr/images/common/svisual_bg_6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    .header_inner {
+      padding: 70px;
+      .header_text {
+        padding: 70px 0 !important;
+        width: 540px;
+        height: 80px;
+        margin: 0 auto 45px;
+        background-image: url("https://www.ut.ac.kr/images/kor2/layout/sub_title.png");
+        background-repeat: no-repeat;
+        text-indent: 100%;
+        overflow: hidden;
+        font-size: 30px;
+        color: white;
+        white-space: nowrap;
+        .sub_text {
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}
