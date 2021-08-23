@@ -50,8 +50,8 @@ const Login = ({ history }) => {
         </p>
       </div>
       <div className="login">
+        <h1>로그인</h1>
         <form className="login_form" onSubmit={onSubmit} autoComplete="off">
-          <h1>로그인</h1>
           <input
             type="text"
             className="id"
@@ -61,16 +61,18 @@ const Login = ({ history }) => {
             value={id}
             onChange={(e) => setId(e.target.value)}
           ></input>
-          <input
-            type="password"
-            className="pw"
-            placeholder="비밀번호를 입력해주세요"
-            required
-            ref={inputPw}
-            value={pw}
-            onChange={(e) => setPw(e.target.value)}
-          ></input>
-          <i className="fas fa-eye" ref={eye} onClick={onClickEye}></i>
+          <div className="pw_wrapper">
+            <input
+              type="password"
+              className="pw"
+              placeholder="비밀번호를 입력해주세요"
+              required
+              ref={inputPw}
+              value={pw}
+              onChange={(e) => setPw(e.target.value)}
+            ></input>
+            <i className="fas fa-eye" ref={eye} onClick={onClickEye}></i>
+          </div>
           <div className="find_join">
             <p onClick={() => history.push("/join")} className="p">
               회원가입
