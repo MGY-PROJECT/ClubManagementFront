@@ -103,7 +103,7 @@ function readImage_backImg(input){
     if(input.files && input.files[0]){
         reader.onload = e => {
             backImg.src = e.target.result;
-        }   
+        }
         reader.readAsDataURL(input.files[0]);
         alert("배경화면 설정이 완료되었습니다.");
     }
@@ -162,5 +162,5 @@ initial_value.addEventListener('click', function(){
     {
         picview_children[i].remove();   
     }
-    alert('초기화 되었습니다.');
+    alert('초기화되었습니다.');
 })

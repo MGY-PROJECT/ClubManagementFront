@@ -386,3 +386,49 @@ section .pictures .material-icons{
     height: 100%;
     background-color: aliceblue;
 } */
+
+@media screen and (max-width:768px){
+    #profile{
+        width: 120px;
+        height: 120px;
+        top: 490px;
+        left: 40%;
+    }
+    section .dark_bg .all, .profile_correction_text{
+        font-size: 15px;
+    }
+    .box{
+        display: block;
+    }
+    .left .introduces{
+        width: 100vw;
+        height: 25vh;
+        border-radius: 0%;
+        background-color: #333;
+    }
+    .right .joins,
+    .right .pictures{
+        top: -100px;
+        width: 100vw;
+        height: 20vh;
+        border-radius: 0%;
+    }
+    .introduces .text, 
+    .joins .text,
+    .pictures .text,
+    .material-icons{
+        text-align: center;
+        left: 41%;
+        font-size: 30px;
+    }
+    .picture_section.event img{
+        left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+    .picture_section img.picture_section_img{
+        width: 300px;
+        height: 300px;
+        margin: 5% 15%;
+    }
+}

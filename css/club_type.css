@@ -307,8 +307,12 @@ section .Uiwang_kinds .club{
 .sport.event, .music.event, .volunteer.event{
     display: none;
 }
-
+.division_text{
+    font-size: 25px;
+}
 .up_arrow{
+    position: relative;
+    z-index: 11;
     width: 42px;
     height: 42px;
     background-color: #333;
@@ -342,5 +346,64 @@ footer{
     }
     footer{
         width: 1300px;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .inner{
+        width: 768px;
+        margin-left: -20px;
+    }
+    header .header_img{
+        width: 768px;
+        background-image: url("https://www.ut.ac.kr/images/common/svisual_bg_6.jpg");
+        background-size: cover;
+    }
+    .inner .explanation .enrollment .material-icons{
+        font-size: 50px;
+    }
+    .inner .explanation .enrollment .material-icons,
+    .inner .call .material-icons{
+        width: 50px;
+        height: 50px;
+    }
+    .campus_list{
+        width: 100px;
+        font-size: 5px;
+    }
+    .campus_list .chungu button .material-icons,
+    .campus_list .jeungpyeong button .material-icons,
+    .campus_list .Uiwang button .material-icons{
+        display: none;
+    }
+    section .explanation .enrollment{
+        display: flex;
+        margin-left: 200px;
+        border: 1px solid #333;
+    }
+    section .explanation .enrollment .material-icons
+    {
+        width: 70px;
+        height: 70px;
+        font-size: 70px;
+        text-align: center;
+        border: 1px solid #333;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .club_original .club_text{
+        font-size: 20px;
+    }
+    section .chungu_kinds .club, section .jeungpyeong_kinds .club, section .Uiwang_kinds .club{
+        width: 100px;
+        height: 200px;
+    }
+    .club_hover .club_text_hover{
+        font-size: 11px;
     }
 }

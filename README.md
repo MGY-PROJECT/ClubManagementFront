@@ -1,3 +1,10 @@
+# 08월 24일
+## 1. 동아리 종류 사이트 가로 768px 크기에 맞춰서 사이크 구조, 크기 변화되도록 만들었다.
+![image](https://user-images.githubusercontent.com/76980526/130548587-c03171c4-c065-417f-8a2c-776c4d636cc3.png)
+## 2. 프로필 사이트 가로 768px 크기에 맞춰서 사이크 구조, 크기 변화되도록 만들었다.
+![image](https://user-images.githubusercontent.com/76980526/130548464-7d905a7d-bc67-452a-82e2-d4f50be18c3f.png)
+![image](https://user-images.githubusercontent.com/76980526/130548499-3e39fb01-eac0-4cbc-851b-26aca2ee2966.png)
+
 # ~ 8월 21일
 ## 1. 사진을 설정하면 다음과 같이 뜨도록 구현했다. 추가하면 밑으로 이동(스크롤)
 ![image](https://user-images.githubusercontent.com/76980526/130323878-e699c0ed-6902-4f05-8342-6d93bb782db0.png)
