@@ -349,12 +349,15 @@ footer{
     }
 }
 @media screen and (max-width: 768px){
-    body{
-        overflow-x: hidden;
+    header .header_img{
+        width: 768px;
+    }
+    footer{
+        width: 768px;
     }
     .inner{
         width: 768px;
-        margin-left: -20px;
+        margin-left: -10px;
     }
     header .header_img{
         width: 768px;

@@ -85,12 +85,6 @@ const readImage_profile =  async(input) => {
         reader.readAsDataURL(input.files[0]);
         alert("프로필 설정이 완료되었습니다.");
     }
-    // post(url,JSON.stringify(data)) // json 객체를 String 객체로 변환시켜준다. 
-    // axios
-    // .post('http://localhost5000/club_profile.html', profileImg.src)
-    // .catch(err => {
-    //     console.log("Error! : ", err);
-    // })
 }
 
 const input_profile = document.getElementById("input-profile");
@@ -113,7 +107,7 @@ input_backImg.addEventListener("change", e => {
     readImage_backImg(e.target);
 })
 // 동아리 사진 지정
-const pic_section = document.querySelector(".picture_section");
+const pic_section = document.querySelector(".picture_section .img");
 const big_pic_contain = document.querySelector('.picture_section img.picture_section_img');
   const previewFiles = function() {
     var files   = document.querySelector('.picture_choice input[type=file]').files; // 파일 선택 부분
@@ -135,13 +129,6 @@ const big_pic_contain = document.querySelector('.picture_section img.picture_sec
           })
         }, false);
         reader.readAsDataURL(file);
-        // 초기화 버튼 누르면 모두 사라짐
-        var picture_inner = document.createElement("img");
-        initial_value.addEventListener('click', function(){
-            for(var i = 0; i < picture_inner[i]; i++){
-                pic_section.remove(picture_inner[i]);
-            }
-        })
       }
     }
     if (files) {
@@ -156,11 +143,10 @@ const initial_value = document.querySelector('.initial_value input');
 initial_value.addEventListener('click', function(){
     backImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 배경 초기화
     profileImg.src = "https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image"; // 프로필 초기화
-    const picview_children =  picture_view.children;
-    // 1부터 설정하면 close창까지 사라져 버린다.
-    for(var i = 2; i < picview_children.length; i++)
-    {
-        picview_children[i].remove();   
+    while(pic_section.hasChildNodes()){ // 부모노드가 자식이 있는지 여부를 알아낸다.
+        pic_section.removeChild(
+            pic_section.firstChild
+        );
     }
     alert('초기화되었습니다.');
 })
