@@ -4,46 +4,46 @@ const Aside = () => {
   return (
     <aside>
       <div className="campus_list">
-        <div className="chungu">
+        <div className="campus">
           <button>
             충주 캠퍼스
-            <span className="material_icons">
-              <i class="fas fa-check"></i>
-            </span>
+            <i className="fas fa-check"></i>
           </button>
-          <ul className="chungu_list">
-            <li className="sport_li">체육</li>
-            <li className="music_li">음악</li>
-            <li className="volunteer_li">봉사</li>
-            <li className="religion_li">종교</li>
-            <li className="academic_li">학술</li>
-            <li className="literature_li">문예</li>
+          <ul>
+            <li>체육</li>
+            <li>음악</li>
+            <li>봉사</li>
+            <li>종교</li>
+            <li>학술</li>
+            <li>문예</li>
           </ul>
         </div>
-        <div className="jeungpyeong">
+        <div className="campus">
           <button>
             증평 캠퍼스
-            <span className="material_icons">
-              <i class="fas fa-check"></i>
-            </span>
+            <i className="fas fa-check"></i>
           </button>
-          <ul className="jeungpyeong_list">
-            <li className="sport_li">체육</li>
-            <li className="voluteer_li">봉사</li>
-            <li className="religion_li">종교</li>
+          <ul>
+            <li>체육</li>
+            <li>음악</li>
+            <li>봉사</li>
+            <li>종교</li>
+            <li>학술</li>
+            <li>문예</li>
           </ul>
         </div>
-        <div className="Uiwang">
+        <div className="campus">
           <button>
             의왕 캠퍼스
-            <span className="material_icons">
-              <i class="fas fa-check"></i>
-            </span>
+            <i className="fas fa-check"></i>
           </button>
-          <ul className="Uiwang_list">
-            <li className="sport_li">체육</li>
-            <li className="music_li">음악</li>
-            <li className="academic_li">학술</li>
+          <ul>
+            <li>체육</li>
+            <li>음악</li>
+            <li>봉사</li>
+            <li>종교</li>
+            <li>학술</li>
+            <li>문예</li>
           </ul>
         </div>
       </div>

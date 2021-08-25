@@ -19,7 +19,7 @@ const Explanation = () => {
         </div>
       </div>
       <div className="call">
-        <i class="fas fa-phone"></i>
+        <i className="fas fa-phone"></i>
         <div className="text">
           <h2>연락처</h2>
           <b>동아리 연합회 사무실</b> TEL : 043-841-5550, 5551
